@@ -214,7 +214,6 @@ h1 .big{display:block;font-family:var(--disp);font-weight:800;text-transform:upp
 .evt p{font-family:var(--disp);font-weight:300;font-size:.8rem;letter-spacing:.34em;text-transform:uppercase;color:var(--l);margin-top:10px}
 h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:block;margin:0 auto;filter:drop-shadow(0 0 16px rgba(255,194,26,.55))}
 .lineup .dj{background:linear-gradient(180deg,#fff 10%,var(--c) 55%,var(--v))!important;-webkit-background-clip:text!important;background-clip:text!important}
-.pano{width:100%;aspect-ratio:16/9;display:block;margin-bottom:12px;border:1px solid var(--m);box-shadow:0 0 40px rgba(255,43,214,.45);background:#000}
 .igs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .igs iframe{width:100%;height:560px;border:1px solid var(--c);background:#fff;box-shadow:0 0 28px rgba(25,240,255,.35)}
 @media(max-width:1000px){.igs{grid-template-columns:repeat(2,1fr)}}
@@ -234,16 +233,10 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
  .sideL .tt{font-size:.74rem;line-height:1.25}.sideL .tt em{display:block;font-style:normal;font-size:.62rem;color:var(--mut);margin-top:2px}
  .sideL a.btn{text-align:center;padding:12px 10px;font-size:.58rem;margin-top:auto}
 }
-.hero2{position:relative}
-.hero2 .pano{margin:0;aspect-ratio:21/9;object-fit:cover}
-.hero2 .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 26px 22px;pointer-events:none;background:linear-gradient(transparent,rgba(3,4,16,.85));display:flex;flex-direction:column;gap:2px}
-.hero2 .cap b{font-family:var(--disp);font-size:clamp(1.1rem,3.4vw,2.2rem);text-transform:uppercase;font-weight:800;background:linear-gradient(90deg,#fff,var(--c),var(--m));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero2 .cap span{font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;color:var(--l)}
 .chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .chips li{padding:9px 18px;border:1px solid var(--c);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;box-shadow:0 0 14px rgba(25,240,255,.3);background:rgba(8,10,32,.5)}
 .car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;scrollbar-width:thin}
 .car iframe{flex:0 0 min(300px,78vw);height:540px;scroll-snap-align:start;border:1px solid var(--m);background:#fff;box-shadow:0 0 26px rgba(255,43,214,.4)}
-@media(max-width:600px){.hero2 .pano{aspect-ratio:16/9}}
 .ig{margin-top:3.5em;padding:34px 20px 20px;border:1px solid transparent;border-radius:24px;background:linear-gradient(rgba(8,10,32,.7),rgba(8,10,32,.7)) padding-box,linear-gradient(120deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5) border-box;backdrop-filter:blur(8px);overflow:hidden}
 .igh{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px}
 .igh img{width:64px;height:64px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5);object-fit:contain}
@@ -338,10 +331,6 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 <section id="ambiente" class="rev" style="max-width:1280px">
   <p class="lab">Noche tras noche</p>
   <h2>Vive <em>Satélite</em></h2>
-  <div class="hero2">
-    <video class="pano" src="escape_full.mp4" controls muted loop playsinline preload="metadata" poster="escape_poster.jpg"></video>
-    <div class="cap"><b>Satélite Disco Bar</b><span>Deusto · Bilbao</span></div>
-  </div>
   <ul class="chips"><li>Local climatizado</li><li>Cachimbas · hookah</li><li>Copas y botellas</li><li>Buen ambiente</li><li>Reggaeton · Crossover · Latin</li></ul>
   <div class="ig">
     <div class="igh">
