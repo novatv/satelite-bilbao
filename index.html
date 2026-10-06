@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Satélite Disco Bar · Dale Reggaeton · Bilbao 23 Oct</title>
+<title>Satélite Disco presenta Dale Reggaeton · Bilbao 23 Oct</title>
 <meta name="description" content="Reggaeton del viejo en Satélite Disco Bar, Bilbao. Viernes 23 de octubre, 23:00–06:00. DJ invitado Casanova desde Ámsterdam.">
-<meta property="og:title" content="Satélite Disco Bar · Reggaeton del viejo · 23 Oct">
+<meta property="og:title" content="Satélite Disco presenta Dale Reggaeton · 23 Oct">
 <meta property="og:description" content="Viernes 23 oct · 23:00–06:00 · DJ invitado Casanova">
 <meta property="og:image" content="flyer.jpg">
 <link rel="icon" href="logo-satelite.png">
@@ -49,6 +49,7 @@ a.btn.solid:hover{background:transparent;color:var(--fg)}
 .kick{font-size:.7rem;letter-spacing:.5em;text-transform:uppercase;color:var(--mut);margin-bottom:1.2em}
 h1{font-family:var(--disp);font-weight:800;font-size:clamp(2.2rem,8.4vw,6.4rem);line-height:.98;text-transform:uppercase;letter-spacing:-.02em;transform-style:preserve-3d;will-change:transform}
 h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--fg);font-weight:500}
+.tag2{margin-top:1.4em;font-family:var(--disp);font-weight:300;font-size:clamp(.8rem,2.2vw,1.15rem);letter-spacing:.4em;text-transform:uppercase}
 .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 40px;margin-top:2.2em;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--fg)}
 .meta i{font-style:normal;color:var(--mut)}
 .count{display:flex;justify-content:center;gap:0;margin:2.6em auto 0;border:1px solid var(--line);width:max-content;max-width:100%;background:var(--card);backdrop-filter:blur(8px)}
@@ -156,16 +157,55 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
 .bz .num{font-family:var(--disp);font-weight:300;font-size:1.9rem;letter-spacing:.04em;margin-bottom:.6em}
 .bz .num small{display:block;font-family:var(--body);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
 .bz button.btn{background:none;cursor:pointer}
+
+/* COLORES LLAMATIVOS */
+:root{--m:#ff2bd6;--c:#19f0ff;--l:#b6ff2b;--o:#ff8a00;--v:#8a3dff;--acc:#19f0ff;--line:rgba(120,200,255,.28)}
+#bgv{opacity:.55!important;filter:saturate(1.4) contrast(1.1)}
+@keyframes grad{to{background-position:300% 0}}
+h1{background:linear-gradient(90deg,#fff,#19f0ff,#ff2bd6,#b6ff2b,#ff8a00,#fff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 8s linear infinite;text-shadow:none;filter:drop-shadow(0 0 22px rgba(255,43,214,.55)) drop-shadow(0 0 40px rgba(25,240,255,.35))}
+h1 span{background:linear-gradient(90deg,#ff2bd6,#ff8a00,#b6ff2b,#19f0ff,#8a3dff,#ff2bd6);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-stroke:0;color:transparent;animation:grad 6s linear infinite;font-weight:800}
+h2 em{background:linear-gradient(90deg,var(--m),var(--o),var(--l),var(--c));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 7s linear infinite}
+h2{text-shadow:0 0 30px rgba(138,61,255,.5)}
+.kick,.lab{color:var(--c)!important;text-shadow:0 0 14px rgba(25,240,255,.7)}
+.tag2{color:var(--l);text-shadow:0 0 18px rgba(182,255,43,.7)}
+a.btn{border-color:var(--c);box-shadow:0 0 18px rgba(25,240,255,.35),inset 0 0 12px rgba(25,240,255,.12)}
+a.btn:hover{background:var(--c);color:#02030c;box-shadow:0 0 34px rgba(25,240,255,.8)}
+a.btn.solid,button.btn.solid{background:linear-gradient(100deg,var(--m),var(--o));border-color:transparent;color:#fff;box-shadow:0 0 28px rgba(255,43,214,.6)}
+a.btn.solid:hover,button.btn.solid:hover{background:linear-gradient(100deg,var(--c),var(--l));color:#02030c;box-shadow:0 0 36px rgba(182,255,43,.7)}
+.count{border-color:var(--m);box-shadow:0 0 30px rgba(255,43,214,.35)}
+.count b{background:linear-gradient(180deg,#fff,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+.marq{border-image:linear-gradient(90deg,var(--m),var(--c),var(--l),var(--o)) 1}
+.marq span:nth-child(even){-webkit-text-stroke:1px var(--m)}
+.marq span:nth-child(3n){color:var(--l)}
+.row:hover{background:linear-gradient(90deg,rgba(255,43,214,.16),transparent)}
+.row .d b{background:linear-gradient(180deg,#fff,var(--m));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{border-color:var(--l)!important;color:var(--l)!important;text-shadow:0 0 10px rgba(182,255,43,.6)}
+.row.prog .tag{border-color:var(--v)!important;color:#c9a8ff!important;text-shadow:none}
+.lineup .dj{background:linear-gradient(180deg,#fff 10%,var(--m) 55%,var(--v));-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 0 26px rgba(255,43,214,.5))}
+.tix{border-color:var(--v);box-shadow:0 0 40px rgba(138,61,255,.35)}
+.tix b{background:linear-gradient(180deg,#fff,var(--o));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tix div{border-color:rgba(138,61,255,.5)}
+.bz{border-color:var(--l);box-shadow:0 0 36px rgba(182,255,43,.25)}
+.bz .num{color:var(--l);text-shadow:0 0 22px rgba(182,255,43,.7)}
+.tilt{box-shadow:0 30px 70px -20px rgba(255,43,214,.6),0 0 0 1px var(--m)}
+.side{border-color:var(--m);box-shadow:0 0 40px rgba(255,43,214,.4)}
+.gal video{filter:saturate(1.6) contrast(1.1)}
+.wide{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wide video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--m);box-shadow:0 0 30px rgba(255,43,214,.35)}
+.wide .w0{grid-column:1/-1;aspect-ratio:21/9;border-color:var(--c);box-shadow:0 0 40px rgba(25,240,255,.45)}
+@media(max-width:600px){.wide{grid-template-columns:1fr}.wide .w0{aspect-ratio:16/9}}
+footer a{color:var(--c)}
+nav .brand{text-shadow:0 0 14px rgba(25,240,255,.7)}
 </style>
 </head>
 <body>
-<video id="bgv" src="bg.mp4" autoplay muted loop playsinline></video>
+<video id="bgv" src="wide_1.mp4" autoplay muted loop playsinline></video>
 <div id="veil"></div>
 <canvas id="gl"></canvas>
 
 <nav>
   <a class="brand" href="#top"><img src="logo-satelite.png" alt="">Satélite</a>
-  <ul><li><a href="#agenda">Agenda</a></li><li><a href="#lineup">Line-up</a></li><li><a href="#tickets">Entradas</a></li><li><a href="#mapa">Ubicación</a></li></ul>
+  <ul><li><a href="#agenda">Agenda</a></li><li><a href="#ambiente">Ambiente</a></li><li><a href="#lineup">Line-up</a></li><li><a href="#tickets">Entradas</a></li><li><a href="#mapa">Ubicación</a></li></ul>
   <a class="btn solid" style="padding:11px 24px" href="https://www.instagram.com/satelitebilbao/">Reservar</a>
 </nav>
 
@@ -180,8 +220,9 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
 <header class="hero" id="top">
   <div>
     <img class="logo" src="logo-satelite.png" alt="Satélite Disco Bar">
-    <p class="kick">Dale Reggaeton presenta</p>
-    <h1>Reggaeton <span>del viejo</span></h1>
+    <p class="kick">Satélite Disco presenta</p>
+    <h1>Dale <span>Reggaeton</span></h1>
+    <p class="tag2">Reggaeton del viejo · Old School</p>
     <div class="meta"><span>Viernes 23 · 10 · 2026</span><i>/</i><span>23:00 — 06:00</span><i>/</i><span>Bilbao</span></div>
     <div class="count">
       <div><b id="cd">--</b><small>días</small></div><div><b id="ch">--</b><small>horas</small></div><div><b id="cm">--</b><small>min</small></div><div><b id="cs">--</b><small>seg</small></div>
@@ -216,6 +257,16 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
     <video src="g_A09.mp4" autoplay muted loop playsinline></video>
     <video src="g_A14.mp4" autoplay muted loop playsinline></video>
     <video src="g_A20.mp4" autoplay muted loop playsinline></video>
+  </div>
+</section>
+
+<section id="ambiente" class="rev" style="max-width:1280px">
+  <p class="lab">Ambiente</p>
+  <h2>Así se vive <em>la noche</em></h2>
+  <div class="wide">
+    <video class="w0" src="wide_2.mp4" autoplay muted loop playsinline poster="wide_poster.jpg"></video>
+    <video src="wide_3.mp4" autoplay muted loop playsinline></video>
+    <video src="wide_1.mp4" autoplay muted loop playsinline></video>
   </div>
 </section>
 
@@ -282,7 +333,7 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
 <script>
 (function(){
  var h1=document.querySelector('h1'),mx=0,my=0;
- var mq=document.getElementById('mq'),w='<span>Dale Reggaeton</span><span>Satélite Disco Bar</span><span>Bilbao</span><span>23 Oct</span><span>DJ Faver</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
+ var mq=document.getElementById('mq'),w='<span>Satélite Disco presenta</span><span>Dale Reggaeton</span><span>Satélite Disco Bar</span><span>Bilbao</span><span>23 Oct</span><span>DJ Faver</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
  function pt(x,y){mx=(x/innerWidth-.5)*2;my=(y/innerHeight-.5)*2}
  addEventListener('mousemove',function(e){pt(e.clientX,e.clientY)});
  addEventListener('deviceorientation',function(e){if(e.gamma!=null){mx=Math.max(-1,Math.min(1,e.gamma/30));my=Math.max(-1,Math.min(1,(e.beta-45)/30))}});
