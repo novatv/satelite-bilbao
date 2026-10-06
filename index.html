@@ -103,6 +103,9 @@ h2 em{font-style:normal;font-weight:300}
 .row .acts{display:flex;gap:10px;flex-wrap:wrap}
 .row .acts a.btn{padding:11px 20px;font-size:.58rem}
 .row.prog{opacity:.6}.row.hid{display:none}
+.row.bell{border-color:var(--m);background:linear-gradient(90deg,rgba(255,43,214,.14),transparent)}
+.row.bell .d img{width:100%;display:block;border:1px solid var(--m);box-shadow:0 0 20px rgba(255,43,214,.5)}
+.row.bell .d{width:130px}
 .tag{display:inline-block;margin-bottom:.6em;padding:3px 12px;border:1px solid var(--acc);color:var(--acc);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase}
 @media(max-width:760px){.row{grid-template-columns:70px 1fr;gap:16px}.row .acts{grid-column:1/-1}.row .d b{font-size:1.9rem}}
 
@@ -262,6 +265,15 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
   <p class="lab">Agenda</p>
   <h2>Agenda <em>Satélite</em></h2>
   <div>
+    <article class="row bell">
+      <div class="d"><a href="bellaqueo.jpg" target="_blank" rel="noopener"><img src="bellaqueo.jpg" alt="Flyer Noche de Bellaqueo en Satélite" loading="lazy"></a></div>
+      <div>
+        <span class="tag">Nueva noche · fecha por confirmar</span>
+        <h3>Noche de Bellaqueo</h3>
+        <p>Todo el reggaetón de la mata para que bailes toda la noche · Satélite Disco Bar, Bilbao<br>DJ Faver 505 + DJ Edwin · <b style="color:var(--l)">Entrada GRATIS toda la noche</b><br>Oferta botella de ron + cachimba · 70 €</p>
+      </div>
+      <div class="acts"><a class="btn solid" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20para%20la%20Noche%20de%20Bellaqueo">Reservar · 602 34 19 60</a></div>
+    </article>
     <div id="aglist"></div>
     <div class="btns"><button class="btn" id="agmore" type="button" style="background:none;cursor:pointer">Ver más fines de semana</button></div>
   </div>
