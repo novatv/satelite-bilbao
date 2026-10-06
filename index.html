@@ -10,7 +10,7 @@
 <meta property="og:image" content="flyer.jpg">
 <link rel="icon" href="logo-satelite.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&family=Unbounded:wght@300;500;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#030410;--fg:#f4f5fb;--mut:#8d93b8;--line:rgba(255,255,255,.14);--acc:#7aa2ff;--card:rgba(8,10,32,.62);--disp:'Unbounded','Inter',system-ui,sans-serif;--body:'Inter',system-ui,-apple-system,sans-serif}
 *{box-sizing:border-box;margin:0}
@@ -309,6 +309,14 @@ a.btn.wa:hover{background:linear-gradient(100deg,#4ff08d,#25d366)!important;colo
 .mini{position:relative;flex:0 0 auto;width:180px;height:320px;margin:0 auto;overflow:hidden;border-radius:22px;border:3px solid #2a2d44;background:#000;box-shadow:0 0 18px rgba(214,41,118,.45)}
 .mini iframe{position:absolute;top:-56px;left:0;width:180px;height:480px;border:0;transform:scale(1.42);transform-origin:50% 0;background:#000}
 @media(min-width:1100px){.main-ig,#ambiente .ig{display:none!important}}
+.dc h3,.dc.big .ov h3{font-family:'Tilt Neon','Unbounded',sans-serif!important;font-weight:400!important;text-transform:none!important;letter-spacing:.02em;font-size:clamp(2.6rem,6vw,4.4rem)!important;line-height:1;background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#fff!important;animation:flick 5s infinite}
+.djs .dc:nth-child(1) h3{text-shadow:0 0 6px #fff,0 0 18px var(--c),0 0 40px var(--c),0 0 80px var(--c)}
+.djs .dc:nth-child(2) h3{text-shadow:0 0 6px #fff,0 0 18px var(--m),0 0 40px var(--m),0 0 80px var(--m)}
+.djs .dc:nth-child(3) h3{text-shadow:0 0 6px #fff,0 0 18px var(--l),0 0 40px var(--l),0 0 80px var(--l)}
+.dc .nm p,.dc.big .ov p{font-family:var(--body);font-weight:500;font-size:.78rem!important;letter-spacing:.34em!important}
+.dc.big .ov{padding-top:90px!important}
+@keyframes flick{0%,18%,22%,62%,100%{opacity:1}20%{opacity:.82}64%{opacity:.9}66%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.dc h3{animation:none}}
 </style>
 </head>
 <body>
@@ -327,17 +335,13 @@ a.btn.wa:hover{background:linear-gradient(100deg,#4ff08d,#25d366)!important;colo
   <a href="flyer.jpg" target="_blank" rel="noopener"><img src="flyer.jpg" alt="Flyer 23 octubre"></a>
   <small>Vie 9 Oct</small>
   <a href="bellaqueo.jpg" target="_blank" rel="noopener"><img src="bellaqueo.jpg" alt="Flyer Noche de Bellaqueo"></a>
-  <small>Satélite en Instagram</small>
-  <div class="mini"><iframe src="https://www.instagram.com/reel/DaQP_R0iDMf/embed" loading="lazy" scrolling="no" allowfullscreen title="Satélite en Instagram"></iframe></div>
-  <div class="mini"><iframe src="https://www.instagram.com/reel/DaQPkzrCAPL/embed" loading="lazy" scrolling="no" allowfullscreen title="Satélite en Instagram"></iframe></div>
+  <a class="btn" href="https://www.instagram.com/satelitebilbao/">Instagram Satélite</a>
   <ul id="nextev" style="display:none"></ul>
 </aside>
 <aside class="side" id="side">
   <small>Vídeo promo · 23 Oct</small>
   <video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video>
-  <div class="mini"><iframe src="https://www.instagram.com/reel/DYshPXtsTpZ/embed" loading="lazy" scrolling="no" allowfullscreen title="Satélite en Instagram"></iframe></div>
-  <div class="mini"><iframe src="https://www.instagram.com/reel/DYU1brzMlPO/embed" loading="lazy" scrolling="no" allowfullscreen title="Satélite en Instagram"></iframe></div>
-  <small>@satelitebilbao</small>
+  <a class="btn" href="https://www.instagram.com/satelitebilbao/">@satelitebilbao</a>
   <a class="btn wa" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar por WhatsApp</a>
 </aside>
 
