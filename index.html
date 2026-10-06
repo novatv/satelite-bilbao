@@ -293,7 +293,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 <section id="lineup" class="lineup rev">
   <p class="lab">Cabina Satélite</p>
   <p class="head">DJ residente</p>
-  <h2 class="dj" style="margin-bottom:.1em">Faver</h2>
+  <h2 class="dj" style="margin-bottom:.1em">Faver 505</h2>
   <p class="from">Satélite Disco Bar · Bilbao</p>
   <p class="head" style="margin-top:3.2em">DJ invitado</p>
   <h2 class="dj" style="margin-bottom:.1em">Casanova</h2>
@@ -353,7 +353,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 <script>
 (function(){
  var h1=document.querySelector('h1'),mx=0,my=0;
- var mq=document.getElementById('mq'),w='<span>Satélite Disco Bar</span><span>Bilbao</span><span>Evento Dale Reggaeton</span><span>Satélite</span><span>23 Oct</span><span>DJ Faver</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
+ var mq=document.getElementById('mq'),w='<span>Satélite Disco Bar</span><span>Bilbao</span><span>Evento Dale Reggaeton</span><span>Satélite</span><span>23 Oct</span><span>DJ Faver 505</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
  function pt(x,y){mx=(x/innerWidth-.5)*2;my=(y/innerHeight-.5)*2}
  addEventListener('mousemove',function(e){pt(e.clientX,e.clientY)});
  addEventListener('deviceorientation',function(e){if(e.gamma!=null){mx=Math.max(-1,Math.min(1,e.gamma/30));my=Math.max(-1,Math.min(1,(e.beta-45)/30))}});
@@ -364,12 +364,12 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
    var w=d.getDay();if((w!==5&&w!==6)||d<now)continue;
    var conf=d.getMonth()==9&&d.getDate()==23,fri=w===5,hid=n>=8?' hid':'';n++;
    var dt='<div class="d"><small>'+W[w]+' · '+M[d.getMonth()]+'</small><b>'+d.getDate()+'</b></div>';
-   if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita · Evento especial</span><h3>Satélite presenta · Evento Dale Reggaeton</h3><p>Reggaeton del viejo · 23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn solid" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
-   else h+='<article class="row prog'+hid+'">'+dt+'<div><span class="tag" style="border-color:var(--mut);color:var(--mut)">Programación habitual · por confirmar</span><h3>'+(fri?'Satélite · Viernes Reggaeton Old School vs Actual':'Satélite · Sábado Latin Party')+'</h3><p>23:30 · Satélite Disco · DJ Faver + DJ Edwin'+(fri?'':' · Entrada 10 € con consumición')+'</p></div></article>'}
+   if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita · Evento especial</span><h3>Satélite presenta · Evento Dale Reggaeton</h3><p>Reggaeton del viejo · 23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver 505 (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn solid" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
+   else h+='<article class="row prog'+hid+'">'+dt+'<div><span class="tag" style="border-color:var(--mut);color:var(--mut)">Programación habitual · por confirmar</span><h3>'+(fri?'Satélite · Viernes Reggaeton Old School vs Actual':'Satélite · Sábado Latin Party')+'</h3><p>23:30 · Satélite Disco · DJ Faver 505 + DJ Edwin'+(fri?'':' · Entrada 10 € con consumición')+'</p></div></article>'}
   box.innerHTML=h;var mb=document.getElementById('agmore');
   if(!document.querySelector('.row.hid'))mb.parentNode.style.display='none';
   mb.onclick=function(){document.querySelectorAll('.row.hid').forEach(function(e){e.classList.remove('hid')});mb.parentNode.style.display='none'}})();
- var ev={t:'Satélite Disco Bar · Evento Dale Reggaeton (reggaeton del viejo)',l:'Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao',d:'DJ residente Faver · DJ invitado Casanova. Entrada 10 € con copa. Botella 70 € hasta las 2:00.'};
+ var ev={t:'Satélite Disco Bar · Evento Dale Reggaeton (reggaeton del viejo)',l:'Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao',d:'DJ residente Faver 505 · DJ invitado Casanova. Entrada 10 € con copa. Botella 70 € hasta las 2:00.'};
  document.getElementById('gcal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(ev.t)+'&dates=20261023T230000/20261024T060000&ctz=Europe/Madrid&location='+encodeURIComponent(ev.l)+'&details='+encodeURIComponent(ev.d);
  var ics='BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Dale Reggaeton//ES\r\nBEGIN:VEVENT\r\nUID:satelite-bilbao-20261023@dalereggaeton\r\nDTSTAMP:20261006T000000Z\r\nDTSTART;TZID=Europe/Madrid:20261023T230000\r\nDTEND;TZID=Europe/Madrid:20261024T060000\r\nSUMMARY:'+ev.t+'\r\nLOCATION:'+ev.l.replace(/,/g,'\\,')+'\r\nDESCRIPTION:'+ev.d+'\r\nEND:VEVENT\r\nEND:VCALENDAR';
  var ai=document.getElementById('ics');ai.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));ai.download='satelite-bilbao-23-oct.ics';
