@@ -218,6 +218,21 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 .igs iframe{width:100%;height:560px;border:1px solid var(--c);background:#fff;box-shadow:0 0 28px rgba(25,240,255,.35)}
 @media(max-width:1000px){.igs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.igs{grid-template-columns:1fr}.igs iframe{height:600px}}
+
+.sideL{display:none}
+@media(min-width:1440px){
+ header,main,footer,.marq{margin-left:290px}
+ .sideL{display:flex;flex-direction:column;gap:12px;position:fixed;z-index:12;top:74px;left:14px;bottom:14px;width:264px;padding:14px;background:var(--card);border:1px solid var(--c);box-shadow:0 0 36px rgba(25,240,255,.3);backdrop-filter:blur(12px);overflow:auto;scrollbar-width:none}
+ .sideL::-webkit-scrollbar{display:none}
+ .sideL small{font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:var(--c)}
+ .sideL ul{list-style:none;padding:0;display:grid;gap:8px}
+ .sideL li a{display:grid;grid-template-columns:46px 1fr;gap:10px;align-items:center;text-decoration:none;color:var(--fg);padding:8px;border:1px solid var(--line);transition:border-color .2s,background .2s}
+ .sideL li a:hover{border-color:var(--m);background:rgba(255,43,214,.12)}
+ .sideL li.nw a{border-color:var(--m)}
+ .sideL .dd{text-align:center;font-family:var(--disp);line-height:1}.sideL .dd b{display:block;font-size:1.3rem;font-weight:800}.sideL .dd i{font-style:normal;font-size:.5rem;letter-spacing:.2em;color:var(--c);text-transform:uppercase}
+ .sideL .tt{font-size:.74rem;line-height:1.25}.sideL .tt em{display:block;font-style:normal;font-size:.62rem;color:var(--mut);margin-top:2px}
+ .sideL a.btn{text-align:center;padding:12px 10px;font-size:.58rem;margin-top:auto}
+}
 </style>
 </head>
 <body>
@@ -231,6 +246,11 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
   <a class="btn solid" style="padding:11px 24px" href="https://www.instagram.com/satelitebilbao/">Reservar</a>
 </nav>
 
+<aside class="sideL" id="sideL">
+  <small>Próximos eventos · Satélite</small>
+  <ul id="nextev"></ul>
+  <a class="btn solid" href="#agenda">Ver agenda completa</a>
+</aside>
 <aside class="side" id="side">
   <button class="x" aria-label="Cerrar" onclick="document.getElementById('side').classList.add('off');document.querySelectorAll('header,main,footer,.marq,nav').forEach(function(e){e.style.marginRight='0';e.style.paddingRight=''})">×</button>
   <small>Satélite · 23 Oct · Evento Dale Reggaeton</small>
@@ -384,7 +404,12 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
    var dt='<div class="d"><small>'+W[w]+' · '+M[d.getMonth()]+'</small><b>'+d.getDate()+'</b></div>';
    if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita · Evento especial</span><h3>Satélite presenta · Evento Dale Reggaeton</h3><p>Reggaeton del viejo · 23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver 505 (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn solid" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
    else h+='<article class="row prog'+hid+'">'+dt+'<div><span class="tag" style="border-color:var(--mut);color:var(--mut)">Programación habitual · por confirmar</span><h3>'+(fri?'Satélite · Viernes Reggaeton Old School vs Actual':'Satélite · Sábado Latin Party')+'</h3><p>23:30 · Satélite Disco · DJ Faver 505 + DJ Edwin'+(fri?'':' · Entrada 10 € con consumición')+'</p></div></article>'}
-  box.innerHTML=h;var mb=document.getElementById('agmore');
+  box.innerHTML=h;
+  var nx=document.getElementById('nextev'),L='<li class="nw"><a href="#agenda"><div class="dd"><b>—</b><i>Fecha ?</i></div><div class="tt">Noche de Bellaqueo<em>Entrada gratis · Faver 505 + Edwin</em></div></a></li>',c=0;
+  document.querySelectorAll('#aglist .row').forEach(function(r){if(c>=8)return;var d=r.querySelector('.d'),t=r.querySelector('h3').textContent,sub=r.querySelector('p').textContent.split('·')[0],sm=d.querySelector('small').innerText.split('·');c++;
+   L+='<li'+(r.querySelector('#gcal')?' class="nw"':'')+'><a href="#agenda"><div class="dd"><b>'+d.querySelector('b').innerText+'</b><i>'+(sm[1]||'').trim()+'</i></div><div class="tt">'+t.replace('Satélite · ','')+'<em>'+sm[0].trim()+' · '+sub.trim()+'</em></div></a></li>'});
+  nx.innerHTML=L;
+  var mb=document.getElementById('agmore');
   if(!document.querySelector('.row.hid'))mb.parentNode.style.display='none';
   mb.onclick=function(){document.querySelectorAll('.row.hid').forEach(function(e){e.classList.remove('hid')});mb.parentNode.style.display='none'}})();
  var ev={t:'Satélite Disco Bar · Evento Dale Reggaeton (reggaeton del viejo)',l:'Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao',d:'DJ residente Faver 505 · DJ invitado Casanova. Entrada 10 € con copa. Botella 70 € hasta las 2:00.'};
