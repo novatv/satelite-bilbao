@@ -196,6 +196,13 @@ a.btn.solid:hover,button.btn.solid:hover{background:linear-gradient(100deg,var(-
 @media(max-width:600px){.wide{grid-template-columns:1fr}.wide .w0{aspect-ratio:16/9}}
 footer a{color:var(--c)}
 nav .brand{text-shadow:0 0 14px rgba(25,240,255,.7)}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1{background:none!important;animation:none!important;filter:none!important;margin:.3em 0 0}
+h1 .dale{height:clamp(120px,27vh,250px);width:auto;max-width:86vw;display:block;margin:0 auto;filter:drop-shadow(0 0 22px rgba(255,194,26,.55)) drop-shadow(0 0 46px rgba(255,43,214,.45));animation:pulse 3.4s ease-in-out infinite}
+@keyframes pulse{50%{filter:drop-shadow(0 0 30px rgba(255,194,26,.9)) drop-shadow(0 0 60px rgba(255,43,214,.7))}}
+.logo{height:clamp(120px,24vh,300px)!important}
+footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 0 18px rgba(255,194,26,.5))}
 </style>
 </head>
 <body>
@@ -221,7 +228,7 @@ nav .brand{text-shadow:0 0 14px rgba(25,240,255,.7)}
   <div>
     <img class="logo" src="logo-satelite.png" alt="Satélite Disco Bar">
     <p class="kick">Satélite Disco presenta</p>
-    <h1>Dale <span>Reggaeton</span></h1>
+    <h1><span class="sr">Dale Reggaeton</span><img class="dale" src="logo-dale.png" alt="Dale Reggaeton"></h1>
     <p class="tag2">Reggaeton del viejo · Old School</p>
     <div class="meta"><span>Viernes 23 · 10 · 2026</span><i>/</i><span>23:00 — 06:00</span><i>/</i><span>Bilbao</span></div>
     <div class="count">
@@ -323,6 +330,7 @@ nav .brand{text-shadow:0 0 14px rgba(25,240,255,.7)}
 </main>
 
 <footer>
+  <img class="fd" src="logo-dale.png" alt="Dale Reggaeton">
   <img src="logo-satelite.png" alt="Satélite">
   <div class="soc"><a href="https://www.instagram.com/satelitebilbao/">@satelitebilbao</a><a href="https://instagram.com/dalereggaetoneu">@dalereggaetoneu</a></div>
   <small>Consumo responsable · Solo mayores de edad</small>
