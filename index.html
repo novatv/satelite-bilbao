@@ -149,6 +149,13 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
  .inl{display:none}
 }
 .side{transition:transform .4s}
+.bz{display:grid;gap:18px;grid-template-columns:1fr;align-items:center;margin-top:28px;padding:30px;border:1px solid var(--line);background:var(--card);backdrop-filter:blur(8px)}
+@media(min-width:760px){.bz{grid-template-columns:1.4fr 1fr}}
+.bz h3{font-family:var(--disp);font-weight:500;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5em}
+.bz ol{padding-left:1.2em;color:var(--mut);font-size:.9rem}
+.bz .num{font-family:var(--disp);font-weight:300;font-size:1.9rem;letter-spacing:.04em;margin-bottom:.6em}
+.bz .num small{display:block;font-family:var(--body);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
+.bz button.btn{background:none;cursor:pointer}
 </style>
 </head>
 <body>
@@ -167,7 +174,7 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
   <small>Próxima noche · 23 Oct</small>
   <img src="flyer.jpg" alt="Flyer oficial">
   <video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video>
-  <a class="btn solid" href="https://wa.me/34603341960?text=Hola%2C%20quiero%20reservar%20para%20el%2023%20de%20octubre">Reservar</a>
+  <a class="btn solid" href="#tickets">Reservar · Bizum</a>
 </aside>
 
 <header class="hero" id="top">
@@ -269,8 +276,23 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
     <div><small>Botella · Antioqueño / Amarillo</small><b>70<sup>€</sup></b><p>Promoción válida hasta las 2:00.</p></div>
     <div><small>Botella · Ron Barceló</small><b>70<sup>€</sup></b><p>Promoción válida hasta las 2:00.</p></div>
   </div>
+  <div class="bz">
+    <div>
+      <h3>Reserva por Bizum</h3>
+      <ol>
+        <li>Haz el Bizum de tu botella o entrada.</li>
+        <li>Concepto: tu nombre + fecha (ej. “Juan 23 oct”).</li>
+        <li>Envía el comprobante por WhatsApp y te confirmamos la reserva.</li>
+      </ol>
+    </div>
+    <div>
+      <div class="num"><small>Bizum al</small>603 34 19 60</div>
+      <button class="btn solid" id="bzcopy" type="button">Copiar número</button>
+      <a class="btn" style="margin-top:10px" href="https://wa.me/34603341960?text=Hola%2C%20acabo%20de%20hacer%20el%20Bizum%20para%20el%2023%20de%20octubre.%20Adjunto%20comprobante.">Enviar comprobante</a>
+    </div>
+  </div>
   <p class="note">Reservas y mesas: <a href="tel:+34603341960" style="color:var(--fg)">603 34 19 60</a> o mensaje directo en Instagram.</p>
-  <div class="btns" style="justify-content:flex-start"><a class="btn solid" href="https://wa.me/34603341960?text=Hola%2C%20quiero%20reservar%20para%20el%2023%20de%20octubre">Reservar por WhatsApp</a><a class="btn" href="https://www.instagram.com/satelitebilbao/">Instagram</a></div>
+  <div class="btns" style="justify-content:flex-start"><a class="btn solid" href="#tickets" onclick="document.querySelector('.bz').scrollIntoView({behavior:'smooth',block:'center'});return false">Reservar por Bizum</a><a class="btn" href="https://wa.me/34603341960?text=Hola%2C%20quiero%20reservar%20para%20el%2023%20de%20octubre">WhatsApp</a><a class="btn" href="https://www.instagram.com/satelitebilbao/">Instagram</a></div>
 </section>
 
 <section id="mapa" class="map rev">
@@ -317,6 +339,7 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
   t.addEventListener('mouseleave',function(){t.style.transform=''})});
  var io=new IntersectionObserver(function(a){a.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
  document.querySelectorAll('.rev').forEach(function(e){io.observe(e)});
+ var bz=document.getElementById('bzcopy');bz.onclick=function(){var n='603341960';(navigator.clipboard?navigator.clipboard.writeText(n):Promise.reject()).then(function(){bz.textContent='Copiado ✓'},function(){bz.textContent=n});setTimeout(function(){bz.textContent='Copiar número'},2500)};
  var bgv=document.getElementById('bgv');
  addEventListener('scroll',function(){bgv.style.opacity=Math.max(.06,.32-scrollY/innerHeight*.3)});
 
