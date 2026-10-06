@@ -284,7 +284,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 <aside class="sideL" id="sideL">
   <small>Esta noche · 23 Oct</small>
   <a href="flyer.jpg" target="_blank" rel="noopener"><img src="flyer.jpg" alt="Flyer 23 octubre"></a>
-  <small>Próxima noche</small>
+  <small>Vie 9 Oct</small>
   <a href="bellaqueo.jpg" target="_blank" rel="noopener"><img src="bellaqueo.jpg" alt="Flyer Noche de Bellaqueo"></a>
   <ul id="nextev" style="display:none"></ul>
 </aside>
@@ -325,9 +325,9 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
   <h2>Agenda <em>Satélite</em></h2>
   <div>
     <article class="row bell">
-      <div class="d"><a href="bellaqueo.jpg" target="_blank" rel="noopener"><img src="bellaqueo.jpg" alt="Flyer Noche de Bellaqueo en Satélite" loading="lazy"></a></div>
+      <div class="d"><small style="display:block;margin-bottom:6px">Vie · Oct 9</small><a href="bellaqueo.jpg" target="_blank" rel="noopener"><img src="bellaqueo.jpg" alt="Flyer Noche de Bellaqueo en Satélite" loading="lazy"></a></div>
       <div>
-        <span class="tag">Nueva noche · fecha por confirmar</span>
+        <span class="tag">Este viernes · 9 de octubre</span>
         <h3>Noche de Bellaqueo</h3>
         <p>Todo el reggaetón de la mata para que bailes toda la noche · Satélite Disco Bar, Bilbao<br>DJ Faver 505 + DJ Edwin · <b style="color:var(--l)">Entrada GRATIS toda la noche</b><br>Oferta botella de ron + cachimba · 70 €</p>
       </div>
@@ -437,7 +437,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
  /* agenda generada: confirmado 23 oct + programación habitual vie/sáb hasta fin de año */
  (function(){var M=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],W=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],box=document.getElementById('aglist'),h='',n=0,now=new Date();now.setHours(0,0,0,0);
   for(var d=new Date(2026,9,9);d<=new Date(2026,11,31);d.setDate(d.getDate()+1)){
-   var w=d.getDay();if((w!==5&&w!==6)||d<now)continue;
+   var w=d.getDay();if((w!==5&&w!==6)||d<now||(d.getMonth()==9&&d.getDate()==9))continue;
    var conf=d.getMonth()==9&&d.getDate()==23,fri=w===5,hid=n>=8?' hid':'';n++;
    var dt='<div class="d"><small>'+W[w]+' · '+M[d.getMonth()]+'</small><b>'+d.getDate()+'</b></div>';
    if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita · Evento especial</span><h3>Satélite presenta · Evento Dale Reggaeton</h3><p>Reggaeton del viejo · 23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver 505 (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn solid" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
