@@ -132,6 +132,23 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
 .bar{position:fixed;left:0;right:0;bottom:0;z-index:15;display:flex;justify-content:center;padding:14px;background:linear-gradient(transparent,var(--bg) 75%);pointer-events:none}
 .bar a{pointer-events:auto;backdrop-filter:blur(10px);background:rgba(3,4,16,.6)}
 @media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}.logo,.marq div{animation:none}}
+
+/* SIDE BANNER */
+.side{display:none}
+@media(min-width:1180px){
+ header,main,footer,.marq{margin-right:310px}
+ nav{padding-right:330px}
+ .side{display:flex;flex-direction:column;gap:12px;position:fixed;z-index:12;top:74px;right:14px;bottom:14px;width:284px;padding:12px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(12px);overflow:auto;scrollbar-width:none}
+ .side::-webkit-scrollbar{display:none}
+ .side small{font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
+ .side img,.side video{width:100%;display:block;border:1px solid var(--line)}
+ .side video{aspect-ratio:9/16;max-height:42vh;object-fit:cover;background:#000}
+ .side a.btn{text-align:center;padding:12px 10px;font-size:.58rem;margin-top:auto}
+ .side .x{position:absolute;top:6px;right:8px;background:none;border:0;color:var(--mut);font-size:1.1rem;cursor:pointer}
+ .side.off{transform:translateX(120%);transition:transform .4s}
+ .inl{display:none}
+}
+.side{transition:transform .4s}
 </style>
 </head>
 <body>
@@ -144,6 +161,14 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
   <ul><li><a href="#agenda">Agenda</a></li><li><a href="#lineup">Line-up</a></li><li><a href="#tickets">Entradas</a></li><li><a href="#mapa">Ubicación</a></li></ul>
   <a class="btn solid" style="padding:11px 24px" href="https://www.instagram.com/satelitebilbao/">Reservar</a>
 </nav>
+
+<aside class="side" id="side">
+  <button class="x" aria-label="Cerrar" onclick="document.getElementById('side').classList.add('off');document.querySelectorAll('header,main,footer,.marq,nav').forEach(function(e){e.style.marginRight='0';e.style.paddingRight=''})">×</button>
+  <small>Próxima noche · 23 Oct</small>
+  <img src="flyer.jpg" alt="Flyer oficial">
+  <video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video>
+  <a class="btn solid" href="https://wa.me/34603341960?text=Hola%2C%20quiero%20reservar%20para%20el%2023%20de%20octubre">Reservar</a>
+</aside>
 
 <header class="hero" id="top">
   <div>
@@ -213,7 +238,7 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
 </section>
 
 <section class="rev stage">
-  <div class="grid">
+  <div class="grid inl">
     <div class="tilt"><img src="flyer.jpg" alt="Flyer oficial" loading="lazy"><i class="glare"></i></div>
     <div class="tilt"><video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video><i class="glare"></i></div>
   </div>
