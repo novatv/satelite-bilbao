@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Satélite Disco presenta Dale Reggaeton · Bilbao 23 Oct</title>
-<meta name="description" content="Reggaeton del viejo en Satélite Disco Bar, Bilbao. Viernes 23 de octubre, 23:00–06:00. DJ invitado Casanova desde Ámsterdam.">
-<meta property="og:title" content="Satélite Disco presenta Dale Reggaeton · 23 Oct">
+<title>Satélite Disco Bar · Bilbao · Evento Dale Reggaeton 23 Oct</title>
+<meta name="description" content="Satélite Disco Bar, Bilbao. Esta noche, evento Dale Reggaeton: reggaeton del viejo. Viernes 23 de octubre, 23:00–06:00. DJ invitado Casanova desde Ámsterdam.">
+<meta property="og:title" content="Satélite Disco Bar · Evento Dale Reggaeton · 23 Oct">
 <meta property="og:description" content="Viernes 23 oct · 23:00–06:00 · DJ invitado Casanova">
 <meta property="og:image" content="flyer.jpg">
 <link rel="icon" href="logo-satelite.png">
@@ -203,6 +203,14 @@ h1 .dale{height:clamp(120px,27vh,250px);width:auto;max-width:86vw;display:block;
 @keyframes pulse{50%{filter:drop-shadow(0 0 30px rgba(255,194,26,.9)) drop-shadow(0 0 60px rgba(255,43,214,.7))}}
 .logo{height:clamp(120px,24vh,300px)!important}
 footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 0 18px rgba(255,194,26,.5))}
+
+h1 .big{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;line-height:.95;font-size:clamp(3rem,13vw,9rem);background:linear-gradient(90deg,#fff,#19f0ff,#8a3dff,#ff2bd6,#19f0ff,#fff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 7s linear infinite;filter:drop-shadow(0 0 28px rgba(25,240,255,.55))}
+.logo{height:clamp(130px,30vh,340px)!important}
+.evt{margin:2.2em auto 0;padding:18px 26px 20px;display:inline-block;border:1px solid var(--m);background:rgba(8,10,32,.55);backdrop-filter:blur(8px);box-shadow:0 0 30px rgba(255,43,214,.3)}
+.evt small{display:block;font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+.evt p{font-family:var(--disp);font-weight:300;font-size:.8rem;letter-spacing:.34em;text-transform:uppercase;color:var(--l);margin-top:10px}
+h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:block;margin:0 auto;filter:drop-shadow(0 0 16px rgba(255,194,26,.55))}
+.lineup .dj{background:linear-gradient(180deg,#fff 10%,var(--c) 55%,var(--v))!important;-webkit-background-clip:text!important;background-clip:text!important}
 </style>
 </head>
 <body>
@@ -211,14 +219,14 @@ footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 
 <canvas id="gl"></canvas>
 
 <nav>
-  <a class="brand" href="#top"><img src="logo-satelite.png" alt="">Satélite</a>
+  <a class="brand" href="#top"><img src="logo-satelite.png" alt="">Satélite Disco</a>
   <ul><li><a href="#agenda">Agenda</a></li><li><a href="#ambiente">Ambiente</a></li><li><a href="#lineup">Line-up</a></li><li><a href="#tickets">Entradas</a></li><li><a href="#mapa">Ubicación</a></li></ul>
   <a class="btn solid" style="padding:11px 24px" href="https://www.instagram.com/satelitebilbao/">Reservar</a>
 </nav>
 
 <aside class="side" id="side">
   <button class="x" aria-label="Cerrar" onclick="document.getElementById('side').classList.add('off');document.querySelectorAll('header,main,footer,.marq,nav').forEach(function(e){e.style.marginRight='0';e.style.paddingRight=''})">×</button>
-  <small>Próxima noche · 23 Oct</small>
+  <small>Satélite · 23 Oct · Evento Dale Reggaeton</small>
   <img src="flyer.jpg" alt="Flyer oficial">
   <video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video>
   <a class="btn solid" href="#tickets">Reservar · Bizum</a>
@@ -227,9 +235,14 @@ footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 
 <header class="hero" id="top">
   <div>
     <img class="logo" src="logo-satelite.png" alt="Satélite Disco Bar">
-    <p class="kick">Satélite Disco presenta</p>
-    <h1><span class="sr">Dale Reggaeton</span><img class="dale" src="logo-dale.png" alt="Dale Reggaeton"></h1>
-    <p class="tag2">Reggaeton del viejo · Old School</p>
+    <p class="kick">Discoteca · Bilbao</p>
+    <h1><span class="sr">Satélite Disco Bar</span><span class="big" aria-hidden="true">Satélite</span></h1>
+    <p class="tag2">Disco Bar · Ribera de Botica Vieja</p>
+    <div class="evt">
+      <small>Esta noche en Satélite · Evento</small>
+      <img class="dale" src="logo-dale.png" alt="Dale Reggaeton">
+      <p>Reggaeton del viejo · Old School</p>
+    </div>
     <div class="meta"><span>Viernes 23 · 10 · 2026</span><i>/</i><span>23:00 — 06:00</span><i>/</i><span>Bilbao</span></div>
     <div class="count">
       <div><b id="cd">--</b><small>días</small></div><div><b id="ch">--</b><small>horas</small></div><div><b id="cm">--</b><small>min</small></div><div><b id="cs">--</b><small>seg</small></div>
@@ -247,7 +260,7 @@ footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 
 <main>
 <section id="agenda" class="rev">
   <p class="lab">Agenda</p>
-  <h2>Próximas <em>noches</em></h2>
+  <h2>Agenda <em>Satélite</em></h2>
   <div>
     <div id="aglist"></div>
     <div class="btns"><button class="btn" id="agmore" type="button" style="background:none;cursor:pointer">Ver más fines de semana</button></div>
@@ -269,7 +282,7 @@ footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 
 
 <section id="ambiente" class="rev" style="max-width:1280px">
   <p class="lab">Ambiente</p>
-  <h2>Así se vive <em>la noche</em></h2>
+  <h2>Así se vive <em>Satélite</em></h2>
   <div class="wide">
     <video class="w0" src="wide_2.mp4" autoplay muted loop playsinline poster="wide_poster.jpg"></video>
     <video src="ww_B04.mp4" autoplay muted loop playsinline></video>
@@ -278,7 +291,7 @@ footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 
 </section>
 
 <section id="lineup" class="lineup rev">
-  <p class="lab">Line-up</p>
+  <p class="lab">Cabina Satélite</p>
   <p class="head">DJ residente</p>
   <h2 class="dj" style="margin-bottom:.1em">Faver</h2>
   <p class="from">Satélite Disco Bar · Bilbao</p>
@@ -290,7 +303,7 @@ footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 
 
 <section id="tickets" class="rev">
   <p class="lab">Entradas &amp; mesas</p>
-  <h2>Reserva tu <em>noche</em></h2>
+  <h2>Reserva en <em>Satélite</em></h2>
   <div class="tix">
     <div><small>Entrada</small><b>10<sup>€</sup></b><p>Incluye copa. Acceso toda la noche.</p></div>
     <div><small>Botella · Antioqueño / Amarillo</small><b>70<sup>€</sup></b><p>Promoción válida hasta las 2:00.</p></div>
@@ -330,18 +343,17 @@ footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 
 </main>
 
 <footer>
-  <img class="fd" src="logo-dale.png" alt="Dale Reggaeton">
-  <img src="logo-satelite.png" alt="Satélite">
-  <div class="soc"><a href="https://www.instagram.com/satelitebilbao/">@satelitebilbao</a><a href="https://instagram.com/dalereggaetoneu">@dalereggaetoneu</a></div>
-  <small>Consumo responsable · Solo mayores de edad</small>
+  <img src="logo-satelite.png" alt="Satélite" style="width:170px">
+  <div class="soc"><a href="https://www.instagram.com/satelitebilbao/">@satelitebilbao</a></div>
+  <small style="margin-bottom:10px">Evento Dale Reggaeton · <a href="https://instagram.com/dalereggaetoneu" style="font-size:inherit;letter-spacing:.1em;text-transform:none">@dalereggaetoneu</a></small><small>Consumo responsable · Solo mayores de edad</small>
 </footer>
-<div class="bar"><a class="btn" href="#agenda">Vie 23 Oct · Satélite Bilbao</a></div>
+<div class="bar"><a class="btn" href="#agenda">Satélite · Vie 23 Oct</a></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
  var h1=document.querySelector('h1'),mx=0,my=0;
- var mq=document.getElementById('mq'),w='<span>Satélite Disco presenta</span><span>Dale Reggaeton</span><span>Satélite Disco Bar</span><span>Bilbao</span><span>23 Oct</span><span>DJ Faver</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
+ var mq=document.getElementById('mq'),w='<span>Satélite Disco Bar</span><span>Bilbao</span><span>Evento Dale Reggaeton</span><span>Satélite</span><span>23 Oct</span><span>DJ Faver</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
  function pt(x,y){mx=(x/innerWidth-.5)*2;my=(y/innerHeight-.5)*2}
  addEventListener('mousemove',function(e){pt(e.clientX,e.clientY)});
  addEventListener('deviceorientation',function(e){if(e.gamma!=null){mx=Math.max(-1,Math.min(1,e.gamma/30));my=Math.max(-1,Math.min(1,(e.beta-45)/30))}});
@@ -352,12 +364,12 @@ footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 
    var w=d.getDay();if((w!==5&&w!==6)||d<now)continue;
    var conf=d.getMonth()==9&&d.getDate()==23,fri=w===5,hid=n>=8?' hid':'';n++;
    var dt='<div class="d"><small>'+W[w]+' · '+M[d.getMonth()]+'</small><b>'+d.getDate()+'</b></div>';
-   if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita</span><h3>Dale Reggaeton · Reggaeton del viejo</h3><p>23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn solid" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
-   else h+='<article class="row prog'+hid+'">'+dt+'<div><span class="tag" style="border-color:var(--mut);color:var(--mut)">Programación habitual · por confirmar</span><h3>'+(fri?'Viernes Reggaeton · Old School vs Actual':'Sábado Latin Party · Crossover')+'</h3><p>23:30 · Satélite Disco · DJ Faver + DJ Edwin'+(fri?'':' · Entrada 10 € con consumición')+'</p></div></article>'}
+   if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita · Evento especial</span><h3>Satélite presenta · Evento Dale Reggaeton</h3><p>Reggaeton del viejo · 23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn solid" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
+   else h+='<article class="row prog'+hid+'">'+dt+'<div><span class="tag" style="border-color:var(--mut);color:var(--mut)">Programación habitual · por confirmar</span><h3>'+(fri?'Satélite · Viernes Reggaeton Old School vs Actual':'Satélite · Sábado Latin Party')+'</h3><p>23:30 · Satélite Disco · DJ Faver + DJ Edwin'+(fri?'':' · Entrada 10 € con consumición')+'</p></div></article>'}
   box.innerHTML=h;var mb=document.getElementById('agmore');
   if(!document.querySelector('.row.hid'))mb.parentNode.style.display='none';
   mb.onclick=function(){document.querySelectorAll('.row.hid').forEach(function(e){e.classList.remove('hid')});mb.parentNode.style.display='none'}})();
- var ev={t:'Dale Reggaeton · Reggaeton del viejo (Satélite Bilbao)',l:'Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao',d:'DJ residente Faver · DJ invitado Casanova. Entrada 10 € con copa. Botella 70 € hasta las 2:00.'};
+ var ev={t:'Satélite Disco Bar · Evento Dale Reggaeton (reggaeton del viejo)',l:'Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao',d:'DJ residente Faver · DJ invitado Casanova. Entrada 10 € con copa. Botella 70 € hasta las 2:00.'};
  document.getElementById('gcal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(ev.t)+'&dates=20261023T230000/20261024T060000&ctz=Europe/Madrid&location='+encodeURIComponent(ev.l)+'&details='+encodeURIComponent(ev.d);
  var ics='BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Dale Reggaeton//ES\r\nBEGIN:VEVENT\r\nUID:satelite-bilbao-20261023@dalereggaeton\r\nDTSTAMP:20261006T000000Z\r\nDTSTART;TZID=Europe/Madrid:20261023T230000\r\nDTEND;TZID=Europe/Madrid:20261024T060000\r\nSUMMARY:'+ev.t+'\r\nLOCATION:'+ev.l.replace(/,/g,'\\,')+'\r\nDESCRIPTION:'+ev.d+'\r\nEND:VEVENT\r\nEND:VCALENDAR';
  var ai=document.getElementById('ics');ai.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));ai.download='satelite-bilbao-23-oct.ics';
