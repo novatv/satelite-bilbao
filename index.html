@@ -253,6 +253,21 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 @media(min-width:1100px){.phones{justify-content:center;overflow:visible}}
 .res{display:flex;justify-content:center;gap:clamp(20px,6vw,90px);flex-wrap:wrap;margin:.3em 0}
 .res .dj{font-size:clamp(2.4rem,9vw,6rem)!important;margin-bottom:.1em!important}
+
+/* LATERALES PEQUEÑOS, AGENDA AL CENTRO */
+@media(min-width:1100px){
+ header,main,footer,.marq{margin-left:228px!important;margin-right:228px!important}
+ nav{padding-left:28px!important;padding-right:28px!important}
+ .side,.sideL{display:flex!important;flex-direction:column;gap:10px;position:fixed;z-index:12;top:74px;bottom:14px;width:200px;padding:10px;background:var(--card);border:1px solid var(--m);box-shadow:0 0 30px rgba(255,43,214,.35);backdrop-filter:blur(12px);overflow:auto;scrollbar-width:none}
+ .side::-webkit-scrollbar,.sideL::-webkit-scrollbar{display:none}
+ .sideL{left:14px;right:auto;border-color:var(--c);box-shadow:0 0 30px rgba(25,240,255,.3)}
+ .side{right:14px;left:auto}
+ .side small,.sideL small{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c)}
+ .sideL img,.side img,.side video{width:100%;display:block;border:1px solid var(--line)}
+ .side video{aspect-ratio:9/16;max-height:50vh;object-fit:cover;background:#000}
+ .side a.btn{padding:11px 8px;font-size:.52rem;text-align:center;margin-top:auto}
+ .inl{display:none}
+}
 </style>
 </head>
 <body>
@@ -267,14 +282,14 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 </nav>
 
 <aside class="sideL" id="sideL">
-  <small>Próximos eventos · Satélite</small>
-  <ul id="nextev"></ul>
-  <a class="btn solid" href="#agenda">Ver agenda completa</a>
+  <small>Esta noche · 23 Oct</small>
+  <a href="flyer.jpg" target="_blank" rel="noopener"><img src="flyer.jpg" alt="Flyer 23 octubre"></a>
+  <small>Próxima noche</small>
+  <a href="bellaqueo.jpg" target="_blank" rel="noopener"><img src="bellaqueo.jpg" alt="Flyer Noche de Bellaqueo"></a>
+  <ul id="nextev" style="display:none"></ul>
 </aside>
 <aside class="side" id="side">
-  <button class="x" aria-label="Cerrar" onclick="document.getElementById('side').classList.add('off');document.querySelectorAll('header,main,footer,.marq,nav').forEach(function(e){e.style.marginRight='0';e.style.paddingRight=''})">×</button>
-  <small>Satélite · 23 Oct · Evento Dale Reggaeton</small>
-  <img src="flyer.jpg" alt="Flyer oficial">
+  <small>Vídeo promo · 23 Oct</small>
   <video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video>
   <a class="btn solid" href="#tickets">Reservar · Bizum</a>
 </aside>
