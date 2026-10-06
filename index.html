@@ -174,7 +174,7 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
       <div>
         <span class="tag">Próxima cita</span>
         <h3>Dale Reggaeton · Reggaeton del viejo</h3>
-        <p>23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ invitado Casanova</p>
+        <p>23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faber (residente) + Casanova (invitado)</p>
       </div>
       <div class="acts">
         <a class="btn solid" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a>
@@ -203,7 +203,10 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
 
 <section id="lineup" class="lineup rev">
   <p class="lab">Line-up</p>
-  <p class="head">DJ invitado</p>
+  <p class="head">DJ residente</p>
+  <h2 class="dj" style="margin-bottom:.1em">Faber</h2>
+  <p class="from">Satélite Disco Bar · Bilbao</p>
+  <p class="head" style="margin-top:3.2em">DJ invitado</p>
   <h2 class="dj" style="margin-bottom:.1em">Casanova</h2>
   <p class="from">Amsterdam → Bilbao</p>
   <p class="s">Reggaeton clásico, perreo old school y los himnos que mantienen la pista llena de las 23:00 a las 06:00.</p>
@@ -246,11 +249,11 @@ footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
 <script>
 (function(){
  var h1=document.querySelector('h1'),mx=0,my=0;
- var mq=document.getElementById('mq'),w='<span>Dale Reggaeton</span><span>Satélite Disco Bar</span><span>Bilbao</span><span>23 Oct</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
+ var mq=document.getElementById('mq'),w='<span>Dale Reggaeton</span><span>Satélite Disco Bar</span><span>Bilbao</span><span>23 Oct</span><span>DJ Faber</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
  function pt(x,y){mx=(x/innerWidth-.5)*2;my=(y/innerHeight-.5)*2}
  addEventListener('mousemove',function(e){pt(e.clientX,e.clientY)});
  addEventListener('deviceorientation',function(e){if(e.gamma!=null){mx=Math.max(-1,Math.min(1,e.gamma/30));my=Math.max(-1,Math.min(1,(e.beta-45)/30))}});
- var ev={t:'Dale Reggaeton · Reggaeton del viejo (Satélite Bilbao)',l:'Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao',d:'DJ invitado Casanova. Entrada 10 € con copa. Botella 70 € hasta las 2:00.'};
+ var ev={t:'Dale Reggaeton · Reggaeton del viejo (Satélite Bilbao)',l:'Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao',d:'DJ residente Faber · DJ invitado Casanova. Entrada 10 € con copa. Botella 70 € hasta las 2:00.'};
  document.getElementById('gcal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(ev.t)+'&dates=20261023T230000/20261024T060000&ctz=Europe/Madrid&location='+encodeURIComponent(ev.l)+'&details='+encodeURIComponent(ev.d);
  var ics='BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Dale Reggaeton//ES\r\nBEGIN:VEVENT\r\nUID:satelite-bilbao-20261023@dalereggaeton\r\nDTSTAMP:20261006T000000Z\r\nDTSTART;TZID=Europe/Madrid:20261023T230000\r\nDTEND;TZID=Europe/Madrid:20261024T060000\r\nSUMMARY:'+ev.t+'\r\nLOCATION:'+ev.l.replace(/,/g,'\\,')+'\r\nDESCRIPTION:'+ev.d+'\r\nEND:VEVENT\r\nEND:VCALENDAR';
  var ai=document.getElementById('ics');ai.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));ai.download='satelite-bilbao-23-oct.ics';
