@@ -214,6 +214,7 @@ h1 .big{display:block;font-family:var(--disp);font-weight:800;text-transform:upp
 .evt p{font-family:var(--disp);font-weight:300;font-size:.8rem;letter-spacing:.34em;text-transform:uppercase;color:var(--l);margin-top:10px}
 h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:block;margin:0 auto;filter:drop-shadow(0 0 16px rgba(255,194,26,.55))}
 .lineup .dj{background:linear-gradient(180deg,#fff 10%,var(--c) 55%,var(--v))!important;-webkit-background-clip:text!important;background-clip:text!important}
+.pano{width:100%;aspect-ratio:16/9;display:block;margin-bottom:12px;border:1px solid var(--m);box-shadow:0 0 40px rgba(255,43,214,.45);background:#000}
 .igs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .igs iframe{width:100%;height:560px;border:1px solid var(--c);background:#fff;box-shadow:0 0 28px rgba(25,240,255,.35)}
 @media(max-width:1000px){.igs{grid-template-columns:repeat(2,1fr)}}
@@ -236,7 +237,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 </style>
 </head>
 <body>
-<video id="bgv" src="wide_1.mp4" autoplay muted loop playsinline></video>
+<video id="bgv" src="bg_escape.mp4" autoplay muted loop playsinline></video>
 <div id="veil"></div>
 <canvas id="gl"></canvas>
 
@@ -319,6 +320,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 <section id="ambiente" class="rev" style="max-width:1280px">
   <p class="lab">Ambiente</p>
   <h2>Así se vive <em>Satélite</em></h2>
+  <video class="pano" src="escape_full.mp4" controls muted loop playsinline preload="metadata" poster="escape_poster.jpg"></video>
   <div class="igs">
     <iframe src="https://www.instagram.com/reel/DaQP_R0iDMf/embed" loading="lazy" allowfullscreen scrolling="no" title="Satélite Disco Bar en Instagram"></iframe>
     <iframe src="https://www.instagram.com/reel/DaQPkzrCAPL/embed" loading="lazy" allowfullscreen scrolling="no" title="Satélite Disco Bar en Instagram"></iframe>
