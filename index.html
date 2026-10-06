@@ -289,6 +289,19 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 .dc.big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%}
 .dc.big .ov{position:relative;z-index:2;width:100%;padding:70px 18px 22px;background:linear-gradient(transparent,rgba(3,4,16,.92) 55%)}
 @media(prefers-reduced-motion:reduce){.vinyl,.eq i{animation:none}}
+.btn.wa,a.btn.wa{background:linear-gradient(100deg,#25d366,#128c7e)!important;border-color:transparent!important;color:#fff!important;box-shadow:0 0 26px rgba(37,211,102,.55)!important}
+a.btn.wa:hover{background:linear-gradient(100deg,#4ff08d,#25d366)!important;color:#021008!important}
+.djs{grid-template-columns:1fr 1.2fr 1fr!important;align-items:stretch}
+.dc{min-height:470px;padding:46px 16px 26px!important;justify-content:space-between!important;gap:0!important}
+.dc:hover{transform:translateY(-6px)!important}
+.dc .vinyl{width:min(170px,68%);margin:6px auto}
+.dc .nm{width:100%;border-top:1px solid var(--line);padding-top:16px}
+.dc .nm h3{font-size:clamp(1.4rem,2.6vw,2rem)}
+.dc .nm p,.dc.big .ov p{margin-top:6px}
+.dc.big{padding:0!important;min-height:470px;justify-content:flex-end!important}
+.dc.big .ov{text-align:center}
+.cab .s{max-width:560px;margin:2.2em auto 0;color:var(--mut);text-align:center}
+@media(max-width:860px){.dc,.dc.big{min-height:0}.dc.big{min-height:460px}.djs{grid-template-columns:1fr!important}}
 </style>
 </head>
 <body>
@@ -299,7 +312,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 <nav>
   <a class="brand" href="#top"><img src="logo-satelite.png" alt="">Satélite Disco</a>
   <ul><li><a href="#agenda">Agenda</a></li><li><a href="#ambiente">Ambiente</a></li><li><a href="#lineup">Line-up</a></li><li><a href="#tickets">Entradas</a></li><li><a href="#mapa">Ubicación</a></li></ul>
-  <a class="btn solid" style="padding:11px 24px" href="https://www.instagram.com/satelitebilbao/">Reservar</a>
+  <a class="btn wa" style="padding:11px 24px" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar</a>
 </nav>
 
 <aside class="sideL" id="sideL">
@@ -312,7 +325,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
 <aside class="side" id="side">
   <small>Vídeo promo · 23 Oct</small>
   <video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video>
-  <a class="btn solid" href="#tickets">Reservar · Bizum</a>
+  <a class="btn wa" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar por WhatsApp</a>
 </aside>
 
 <header class="hero" id="top">
@@ -393,20 +406,21 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
     <article class="dc">
       <span class="role">Residente</span>
       <div class="vinyl"><b>F</b></div>
-      <h3>Faver 505</h3><p>DJ residente · Satélite Disco</p>
+      <div class="nm"><h3>Faver 505</h3><p>DJ residente · Satélite</p></div>
     </article>
     <article class="dc big">
       <span class="role inv">DJ invitado · 23 Oct</span>
       <img src="casanova-flyer.jpg" alt="Casanova, DJ invitado desde Ámsterdam" loading="lazy">
-      <div class="ov"><h3>Casanova</h3><p>Desde Ámsterdam · La Universidad de Perreo</p></div>
+      <div class="ov"><h3>Casanova</h3><p>Desde Ámsterdam</p></div>
     </article>
     <article class="dc">
       <span class="role">Residente</span>
       <div class="vinyl rev2"><b>E</b></div>
-      <h3>Edwin</h3><p>DJ residente · Satélite Disco</p>
+      <div class="nm"><h3>Edwin</h3><p>DJ residente · Satélite</p></div>
     </article>
   </div>
-  <p class="s" style="max-width:560px;margin:2.2em auto 0;color:var(--mut);text-align:center">Reggaeton clásico, perreo old school y los himnos que mantienen la pista llena de las 23:00 a las 06:00.</p>
+  <p class="s">Reggaeton clásico, perreo old school y los himnos que mantienen la pista llena de las 23:00 a las 06:00.</p>
+  <div class="btns"><a class="btn wa" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reserva tu mesa por WhatsApp</a></div>
 </section>
 
 <section id="tickets" class="rev">
@@ -432,8 +446,8 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
       <a class="btn" style="margin-top:10px" href="https://wa.me/34602341960?text=Hola%2C%20acabo%20de%20hacer%20el%20Bizum%20para%20el%2023%20de%20octubre.%20Adjunto%20comprobante.">Enviar comprobante</a>
     </div>
   </div>
-  <p class="note">Reservas y mesas: <a href="tel:+34602341960" style="color:var(--fg)">602 34 19 60</a> o mensaje directo en Instagram.</p>
-  <div class="btns" style="justify-content:flex-start"><a class="btn solid" href="#tickets" onclick="document.querySelector('.bz').scrollIntoView({behavior:'smooth',block:'center'});return false">Reservar por Bizum</a><a class="btn" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20para%20el%2023%20de%20octubre">WhatsApp</a><a class="btn" href="https://www.instagram.com/satelitebilbao/">Instagram</a></div>
+  <p class="note">Reservas y mesas por WhatsApp: <a href="tel:+34602341960" style="color:var(--fg)">602 34 19 60</a>.</p>
+  <div class="btns" style="justify-content:flex-start"><a class="btn wa" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar por WhatsApp · 602 34 19 60</a><a class="btn" href="https://www.instagram.com/satelitebilbao/">Instagram</a></div>
 </section>
 
 <section id="mapa" class="map rev">
@@ -472,7 +486,7 @@ h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:b
    var w=d.getDay();if((w!==5&&w!==6)||d<now||(d.getMonth()==9&&d.getDate()==9))continue;
    var conf=d.getMonth()==9&&d.getDate()==23,fri=w===5,hid=n>=8?' hid':'';n++;
    var dt='<div class="d"><small>'+W[w]+' · '+M[d.getMonth()]+'</small><b>'+d.getDate()+'</b></div>';
-   if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita · Evento especial</span><h3>Satélite presenta · Evento Dale Reggaeton</h3><p>Reggaeton del viejo · 23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver 505 (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn solid" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
+   if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita · Evento especial</span><h3>Satélite presenta · Evento Dale Reggaeton</h3><p>Reggaeton del viejo · 23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver 505 (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn wa" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar WhatsApp</a><a class="btn" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
    else h+='<article class="row prog'+hid+'">'+dt+'<div><span class="tag" style="border-color:var(--mut);color:var(--mut)">Programación habitual · por confirmar</span><h3>'+(fri?'Satélite · Viernes Reggaeton Old School vs Actual':'Satélite · Sábado Latin Party')+'</h3><p>23:30 · Satélite Disco · DJ Faver 505 + DJ Edwin'+(fri?'':' · Entrada 10 € con consumición')+'</p></div></article>'}
   box.innerHTML=h;
   var nx=document.getElementById('nextev'),L='<li class="nw"><a href="#agenda"><div class="dd"><b>—</b><i>Fecha ?</i></div><div class="tt">Noche de Bellaqueo<em>Entrada gratis · Faver 505 + Edwin</em></div></a></li>',c=0;
