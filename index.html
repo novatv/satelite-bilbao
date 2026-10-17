@@ -3,648 +3,327 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Satélite Disco Bar · Bilbao · Evento Dale Reggaeton 23 Oct</title>
-<meta name="description" content="Satélite Disco Bar, Bilbao. Esta noche, evento Dale Reggaeton: reggaeton del viejo. Viernes 23 de octubre, 23:00–06:00. DJ invitado Casanova desde Ámsterdam.">
-<meta property="og:title" content="Satélite Disco Bar · Evento Dale Reggaeton · 23 Oct">
-<meta property="og:description" content="Viernes 23 oct · 23:00–06:00 · DJ invitado Casanova">
-<meta property="og:image" content="flyer.jpg">
+<title>Satélite Disco Bar · Bilbao · Dale Reggaeton viernes 23 octubre</title>
+<meta name="description" content="Satélite Disco Bar, Bilbao. Viernes 23 de octubre: Dale Reggaeton, reggaeton del viejo con Casanova desde Ámsterdam. 23:00 a 06:00. Entrada 10 € con copa. Mesas y botellas por WhatsApp.">
+<meta property="og:title" content="Satélite Disco Bar · Dale Reggaeton · Viernes 23 octubre">
+<meta property="og:description" content="Reggaeton del viejo con Casanova desde Ámsterdam. 23:00 a 06:00 · Entrada 10 € con copa.">
+<meta property="og:image" content="https://salasatelite.es/flyer.jpg">
+<meta name="theme-color" content="#2440ff">
 <link rel="icon" href="logo-satelite.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Tilt+Neon&family=Unbounded:wght@300;500;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#030410;--fg:#f4f5fb;--mut:#8d93b8;--line:rgba(255,255,255,.14);--acc:#7aa2ff;--card:rgba(8,10,32,.62);--disp:'Unbounded','Inter',system-ui,sans-serif;--body:'Inter',system-ui,-apple-system,sans-serif}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:300;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-#gl{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
-#bgv{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.32;filter:grayscale(.3) contrast(1.1)}
-#veil{position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse at 50% 30%,transparent 0%,rgba(3,4,16,.55) 55%,var(--bg) 100%)}
-header,main,footer,nav{position:relative;z-index:2}
+:root{
+  --bk:#000;
+  --wh:#fff;
+  --gr:#9a9a9a;
+  --blue:#2440ff;     /* azul del logo de Satélite */
+  --blue2:#1a30d6;
+  --gold:#ffc21a;     /* dorado de Dale Reggaeton */
+  --line:rgba(255,255,255,.14);
+  --disp:'Anton','Impact',sans-serif;
+  --f:'Inter Tight','Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bk);color:var(--wh);font:400 1rem/1.55 var(--f);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video,iframe{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:linear-gradient(rgba(3,4,16,.85),transparent);backdrop-filter:blur(2px)}
-nav .brand{display:flex;align-items:center;gap:12px;color:var(--fg);text-decoration:none;font-family:var(--disp);font-weight:500;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase}
-nav .brand img{width:38px;height:38px;object-fit:contain}
-nav ul{display:flex;gap:30px;list-style:none;padding:0}
-nav ul a{color:var(--fg);text-decoration:none;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;opacity:.75;transition:opacity .2s}
-nav ul a:hover{opacity:1}
-@media(max-width:760px){nav ul{display:none}nav{padding:12px 18px}}
+/* BOTONES rectangulares (Eden) */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 34px;background:var(--blue);color:var(--wh);font:800 1rem/1 var(--f);text-transform:uppercase;letter-spacing:.02em;border:0;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--gold);color:var(--bk)}
+.btn.ghost{background:none;box-shadow:inset 0 0 0 2px var(--wh)}
+.btn.ghost:hover{background:var(--wh);color:var(--bk)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
 
-/* BOTONES */
-a.btn{display:inline-block;padding:15px 34px;font-family:var(--disp);font-weight:500;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;color:var(--fg);border:1px solid var(--fg);transition:background .25s,color .25s,letter-spacing .25s}
-a.btn:hover{background:var(--fg);color:#030410}
-a.btn.solid{background:var(--fg);color:#030410}
-a.btn.solid:hover{background:transparent;color:var(--fg)}
-.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:2em}
+/* BARRA DE COLOR con logo (Amnesia) */
+.top{position:fixed;inset:0 0 auto;z-index:30;height:64px;display:flex;justify-content:space-between;align-items:center;padding:0 clamp(12px,3vw,28px);background:var(--blue)}
+.top .logo{display:flex;align-items:center;gap:10px;font:400 1.7rem/1 var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.top .logo img{width:48px;height:48px}
+.burger{width:48px;height:48px;display:grid;place-content:center;gap:7px;background:none;border:0;cursor:pointer}
+.burger i{display:block;width:30px;height:3px;background:var(--wh);border-radius:2px}
 
-/* HERO */
-.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px 22px 60px;perspective:1000px}
-.hero>div{max-width:1000px}
-.logo{width:auto;height:clamp(150px,34vh,330px);max-width:80vw;display:block;margin:0 auto 10px;animation:fl 7s ease-in-out infinite,hue 10s linear infinite}
-@keyframes fl{50%{transform:translateY(-10px) scale(1.02)}}
-@keyframes hue{
- 0%{filter:hue-rotate(0deg) saturate(1.3) drop-shadow(0 0 28px rgba(58,91,255,.7))}
- 50%{filter:hue-rotate(180deg) saturate(1.4) drop-shadow(0 0 34px rgba(255,63,164,.7))}
- 100%{filter:hue-rotate(360deg) saturate(1.3) drop-shadow(0 0 28px rgba(58,91,255,.7))}}
-.kick{font-size:.7rem;letter-spacing:.5em;text-transform:uppercase;color:var(--mut);margin-bottom:1.2em}
-h1{font-family:var(--disp);font-weight:800;font-size:clamp(2.2rem,8.4vw,6.4rem);line-height:.98;text-transform:uppercase;letter-spacing:-.02em;transform-style:preserve-3d;will-change:transform}
-h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--fg);font-weight:500}
-.tag2{margin-top:1.4em;font-family:var(--disp);font-weight:300;font-size:clamp(.8rem,2.2vw,1.15rem);letter-spacing:.4em;text-transform:uppercase}
-.meta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 40px;margin-top:2.2em;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--fg)}
-.meta i{font-style:normal;color:var(--mut)}
-.count{display:flex;justify-content:center;gap:0;margin:2.6em auto 0;border:1px solid var(--line);width:max-content;max-width:100%;background:var(--card);backdrop-filter:blur(8px)}
-.count div{padding:14px 22px;text-align:center;border-right:1px solid var(--line)}.count div:last-child{border:0}
-.count b{display:block;font-family:var(--disp);font-weight:300;font-size:1.7rem;font-variant-numeric:tabular-nums}
-.count small{font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--mut)}
-.scroll{margin-top:3em;font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mut)}
-.scroll:after{content:"";display:block;width:1px;height:46px;margin:12px auto 0;background:linear-gradient(var(--fg),transparent);animation:ln 2.2s ease-in-out infinite}
-@keyframes ln{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* MENÚ a pantalla completa */
+.menu{position:fixed;inset:0;z-index:40;background:var(--blue);display:grid;place-items:center;text-align:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.menu.open{opacity:1;visibility:visible}
+.menu ul{list-style:none;display:grid;gap:6px}
+.menu a{font:400 clamp(2.6rem,10vw,5.4rem)/1.05 var(--disp);text-transform:uppercase}
+.menu a:hover{color:var(--gold)}
+.menu .close{position:absolute;top:8px;right:clamp(12px,3vw,28px);background:none;border:0;color:var(--wh);font-size:2.6rem;line-height:1;width:48px;height:48px;cursor:pointer}
 
-/* MARQUEE */
-.marq{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;background:rgba(3,4,16,.7);backdrop-filter:blur(6px)}
-.marq div{display:flex;width:max-content;animation:mq 34s linear infinite}
-.marq span{font-family:var(--disp);font-weight:300;font-size:1.05rem;letter-spacing:.34em;text-transform:uppercase;white-space:nowrap;padding-right:2.4em}
-.marq span:nth-child(even){color:transparent;-webkit-text-stroke:1px var(--fg)}
-@keyframes mq{to{transform:translateX(-50%)}}
+/* HERO: vídeo a pantalla completa (Eden) */
+.hero{position:relative;height:100svh;min-height:600px;display:grid;place-items:center;overflow:hidden;margin-top:0}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2) 50%,#000)}
+.hero .in{position:relative;z-index:1;text-align:center;display:grid;justify-items:center;gap:16px;padding:64px 16px 0}
+.hero .in .sat{width:clamp(180px,30vw,300px);height:auto}
+.hero .in p{font:600 clamp(1rem,2.4vw,1.3rem)/1.3 var(--f);text-transform:uppercase;letter-spacing:.06em}
+
+/* PALABRA GIGANTE REPETIDA (Amnesia) */
+.wall{position:relative;overflow:hidden;padding:clamp(40px,7vw,80px) 0;isolation:isolate}
+.wall .rows{position:absolute;inset:0;z-index:-1;display:grid;align-content:center;gap:0;pointer-events:none;user-select:none}
+.wall .rows div{display:flex;width:max-content;font:400 clamp(4.4rem,15vw,11rem)/.92 var(--disp);text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.wall .rows div span{padding-right:.18em}
+.wall .rows div:nth-child(even){margin-left:-1.6em}
+.wall .rows div:nth-child(even) span:nth-child(odd){color:transparent;-webkit-text-stroke:2px var(--gold)}
+@media(prefers-reduced-motion:no-preference){
+  .wall .rows div{animation:slide 40s linear infinite}
+  .wall .rows div:nth-child(even){animation-direction:reverse}
+  @keyframes slide{to{transform:translateX(-33.333%)}}
+}
+
+/* CÍRCULO con el vídeo (la forma de Amnesia, con el círculo del logo de Satélite) */
+.orb{position:relative;width:min(560px,82vw);aspect-ratio:1;margin:0 auto}
+.orb .disc{position:absolute;inset:0;border-radius:50%;overflow:hidden;box-shadow:0 0 0 10px var(--bk),0 0 0 14px var(--blue)}
+.orb video{width:100%;height:100%;object-fit:cover}
+
+/* PEGATINAS */
+.stk{position:absolute;z-index:2;filter:drop-shadow(0 6px 14px rgba(0,0,0,.6))}
+.stk.s1{width:30%;left:-12%;top:4%;transform:rotate(-14deg)}
+.stk.s2{width:46%;right:-16%;top:-4%;transform:rotate(8deg)}
+.stk.s3{right:-10%;bottom:12%;transform:rotate(-7deg);background:var(--gold);color:var(--bk);font:400 clamp(1.1rem,3.4vw,1.9rem)/1 var(--disp);text-transform:uppercase;padding:10px 16px}
+.stk.s4{left:-8%;bottom:6%;transform:rotate(6deg);background:var(--wh);color:var(--bk);font:800 clamp(.8rem,2.2vw,1.05rem)/1.15 var(--f);text-transform:uppercase;padding:10px 14px;max-width:48%}
+@media(max-width:600px){.stk.s1{left:-6%}.stk.s2{right:-8%}.stk.s3{right:-4%}.stk.s4{left:-3%}}
+
+/* LA UNIVERSIDAD DEL PERREO */
+.uni{background:radial-gradient(ellipse at 70% 30%,rgba(255,43,184,.22),transparent 60%),#0a0008}
+.uni .ev{grid-template-columns:1fr}
+@media(min-width:860px){.uni .ev{grid-template-columns:1fr minmax(0,460px)}.uni .poster{order:2;transform:rotate(2deg)}}
+.uni .when{background:#ff2bb8;color:var(--wh)}
+.uni h3{color:#ff5cc8}
+.uni .tags{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 32px;list-style:none}
+.uni .tags li{font:400 clamp(1.1rem,2.6vw,1.5rem)/1 var(--disp);text-transform:uppercase;padding:8px 14px;border:2px solid #ff2bb8}
+.uni .tags li:nth-child(even){background:var(--gold);color:var(--bk);border-color:var(--gold)}
+.uni .btn{background:#ff2bb8}
+.uni .btn:hover{background:var(--gold);color:var(--bk)}
 
 /* SECCIONES */
-section{padding:110px 24px;max-width:1120px;margin:auto}
-.lab{font-size:.68rem;letter-spacing:.5em;text-transform:uppercase;color:var(--mut);margin-bottom:1.2em;display:flex;align-items:center;gap:16px}
-.lab:after{content:"";flex:1;height:1px;background:var(--line)}
-h2{font-family:var(--disp);font-weight:800;font-size:clamp(1.8rem,5.2vw,3.6rem);line-height:1.05;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:1.1em}
-h2 em{font-style:normal;font-weight:300}
+section{padding:clamp(72px,11vw,130px) 0;scroll-margin-top:64px}
+h2{font:400 clamp(3rem,10vw,6.6rem)/.95 var(--disp);text-transform:uppercase;text-align:center;margin-bottom:clamp(36px,6vw,64px)}
 
-/* LINE-UP */
-.lineup{text-align:center}
-.lineup .head{font-size:.7rem;letter-spacing:.5em;text-transform:uppercase;color:var(--mut)}
-.lineup .dj{font-family:var(--disp);font-weight:800;font-size:clamp(3rem,13vw,9rem);line-height:1;text-transform:uppercase;margin:.2em 0;letter-spacing:-.03em;background:linear-gradient(180deg,#fff 30%,#5a67c9);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lineup .from{font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mut)}
-.lineup p.s{max-width:560px;margin:2em auto 0;color:var(--mut)}
+/* PRÓXIMOS EVENTOS (Eden) */
+.ev{display:grid;gap:clamp(28px,4vw,56px);align-items:center}
+@media(min-width:860px){.ev{grid-template-columns:minmax(0,460px) 1fr}}
+.ev .poster{display:block;position:relative;transform:rotate(-2deg);box-shadow:0 0 0 6px var(--wh);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.ev .poster:hover{transform:rotate(0) scale(1.02)}
+.ev .poster img{width:100%;height:auto;aspect-ratio:1080/1350;object-fit:cover}
+.ev .when{display:inline-block;background:var(--gold);color:var(--bk);font:400 clamp(1.2rem,2.6vw,1.6rem)/1 var(--disp);text-transform:uppercase;padding:8px 14px}
+.ev h3{font:400 clamp(3rem,8vw,5.6rem)/.95 var(--disp);text-transform:uppercase;margin:18px 0}
+.ev .who{font-size:1.15rem}
+.ev .who b{font-weight:800}
+.ev dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;margin:26px 0 32px}
+.ev dt{text-transform:uppercase;font-size:.85rem;font-weight:800;letter-spacing:.04em;color:var(--gold);padding-top:2px}
 
-/* MEDIA */
-.grid{display:grid;gap:30px;grid-template-columns:1fr;align-items:center}
-@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
-.stage{perspective:1200px}
-.tilt{position:relative;transform-style:preserve-3d;transition:transform .15s ease-out;box-shadow:0 40px 80px -30px rgba(0,0,0,.9),0 0 0 1px var(--line)}
-.tilt img,.tilt video{width:100%;display:block}
-.tilt .glare{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.45),transparent 55%)}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
-.gal video{width:100%;aspect-ratio:9/14;object-fit:cover;display:block;filter:grayscale(1) contrast(1.1);transition:filter .4s}
-.gal video:hover{filter:none}
-@media(max-width:700px){.gal{grid-template-columns:repeat(2,1fr)}}
+/* MESAS Y BOTELLAS */
+.vip{background:var(--blue)}
+.vip h2{color:var(--wh)}
+.prices{display:grid;gap:14px}
+@media(min-width:760px){.prices{grid-template-columns:repeat(3,1fr)}}
+.prices div{background:var(--bk);padding:34px 26px;text-align:center}
+.prices small{display:block;text-transform:uppercase;font-weight:800;font-size:.85rem;letter-spacing:.04em;color:var(--gold)}
+.prices b{display:block;font:400 4.6rem/1 var(--disp);margin:12px 0 8px}
+.prices p{color:var(--gr)}
+.bizum{max-width:680px;margin:52px auto 0;text-align:center}
+.bizum h3{font:400 clamp(2rem,5vw,2.8rem)/1 var(--disp);text-transform:uppercase;margin-bottom:14px}
+.bizum .num{font:400 clamp(2.8rem,9vw,4.6rem)/1 var(--disp);margin:22px 0 26px;letter-spacing:.02em}
+.bizum .btns{justify-content:center}
+.vip .btn{background:var(--bk)}
+.vip .btn:hover{background:var(--gold);color:var(--bk)}
+.vip .btn.ghost{background:none}
 
-/* AGENDA */
-.row{display:grid;grid-template-columns:130px 1fr auto;gap:28px;align-items:center;padding:30px 0;border-top:1px solid var(--line);transition:background .3s,padding .3s}
-.row:last-child{border-bottom:1px solid var(--line)}
-.row:hover{background:linear-gradient(90deg,rgba(122,162,255,.08),transparent);padding-left:14px}
-.row .d{font-family:var(--disp)}.row .d b{display:block;font-size:2.6rem;font-weight:800;line-height:1}.row .d small{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mut)}
-.row h3{font-family:var(--disp);font-weight:500;font-size:1.15rem;text-transform:uppercase;letter-spacing:.02em}
-.row p{color:var(--mut);font-size:.88rem;margin-top:.3em}
-.row .acts{display:flex;gap:10px;flex-wrap:wrap}
-.row .acts a.btn{padding:11px 20px;font-size:.58rem}
-.row.prog{opacity:.6}.row.hid{display:none}
-.row.bell{border-color:var(--m);background:linear-gradient(90deg,rgba(255,43,214,.14),transparent)}
-.row.bell .d img{width:100%;display:block;border:1px solid var(--m);box-shadow:0 0 20px rgba(255,43,214,.5)}
-.row.bell .d{width:130px}
-.tag{display:inline-block;margin-bottom:.6em;padding:3px 12px;border:1px solid var(--acc);color:var(--acc);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase}
-@media(max-width:760px){.row{grid-template-columns:70px 1fr;gap:16px}.row .acts{grid-column:1/-1}.row .d b{font-size:1.9rem}}
-
-/* TICKETS */
-.tix{display:grid;gap:0;grid-template-columns:1fr;border:1px solid var(--line);background:var(--card);backdrop-filter:blur(8px)}
-@media(min-width:760px){.tix{grid-template-columns:repeat(3,1fr)}}
-.tix div{padding:40px 30px;border-bottom:1px solid var(--line)}
-@media(min-width:760px){.tix div{border-bottom:0;border-right:1px solid var(--line)}.tix div:last-child{border-right:0}}
-.tix small{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
-.tix b{display:block;font-family:var(--disp);font-weight:300;font-size:3rem;margin:.2em 0}
-.tix b sup{font-size:1.1rem;vertical-align:top;margin-left:2px}
-.tix p{color:var(--mut);font-size:.88rem}
-.note{margin-top:1.4em;font-size:.78rem;color:var(--mut);letter-spacing:.06em}
+/* SATÉLITE */
+.about p{max-width:700px;margin:0 auto 18px;text-align:center;font-size:1.1rem}
+.about .btns{justify-content:center;margin-top:40px}
 
 /* MAPA */
-.map iframe{width:100%;height:420px;border:0;filter:grayscale(1) invert(.92) contrast(.85);opacity:.9}
-.addr{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center;margin-top:24px}
-.addr p{font-size:.95rem}.addr p span{display:block;color:var(--mut);font-size:.8rem}
+.map iframe{width:100%;height:420px;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
 
-footer{text-align:center;padding:90px 20px 120px;border-top:1px solid var(--line);background:linear-gradient(transparent,rgba(3,4,16,.95))}
-footer img{width:90px;opacity:.9;margin-bottom:20px}
-footer .soc{display:flex;gap:30px;justify-content:center;margin-bottom:24px;flex-wrap:wrap}
-footer a{color:var(--fg);text-decoration:none;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;opacity:.8}footer a:hover{opacity:1}
-footer small{display:block;color:var(--mut);font-size:.7rem;letter-spacing:.1em}
+/* PIE (Eden) */
+footer{padding:80px 0 120px;text-align:center;border-top:1px solid var(--line)}
+footer .mark{width:150px;height:auto;margin:0 auto 34px}
+footer .soc{display:flex;justify-content:center;gap:34px;margin-bottom:40px}
+footer .soc svg{width:34px;height:34px;fill:var(--gold);transition:fill .2s}
+footer .soc a:hover svg{fill:var(--wh)}
+footer h4{font:800 1.05rem/1 var(--f);text-transform:uppercase;margin:28px 0 10px}
+footer p{font-size:1.1rem;line-height:1.4}
+footer small{display:block;margin-top:52px;color:var(--gr);font-size:.85rem}
 
-.rev{opacity:0;transform:perspective(1000px) rotateX(10deg) translateY(40px);transition:opacity 1s,transform 1.1s cubic-bezier(.2,.8,.2,1)}
-.rev.in{opacity:1;transform:none}
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:15;display:flex;justify-content:center;padding:14px;background:linear-gradient(transparent,var(--bg) 75%);pointer-events:none}
-.bar a{pointer-events:auto;backdrop-filter:blur(10px);background:rgba(3,4,16,.6)}
-@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}.logo,.marq div{animation:none}}
-
-/* SIDE BANNER */
-.side{display:none}
-@media(min-width:1180px){
- header,main,footer,.marq{margin-right:310px}
- nav{padding-right:330px}
- .side{display:flex;flex-direction:column;gap:12px;position:fixed;z-index:12;top:74px;right:14px;bottom:14px;width:284px;padding:12px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(12px);overflow:auto;scrollbar-width:none}
- .side::-webkit-scrollbar{display:none}
- .side small{font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
- .side img,.side video{width:100%;display:block;border:1px solid var(--line)}
- .side video{aspect-ratio:9/16;max-height:42vh;object-fit:cover;background:#000}
- .side a.btn{text-align:center;padding:12px 10px;font-size:.58rem;margin-top:auto}
- .side .x{position:absolute;top:6px;right:8px;background:none;border:0;color:var(--mut);font-size:1.1rem;cursor:pointer}
- .side.off{transform:translateX(120%);transition:transform .4s}
- .inl{display:none}
-}
-.side{transition:transform .4s}
-.bz{display:grid;gap:18px;grid-template-columns:1fr;align-items:center;margin-top:28px;padding:30px;border:1px solid var(--line);background:var(--card);backdrop-filter:blur(8px)}
-@media(min-width:760px){.bz{grid-template-columns:1.4fr 1fr}}
-.bz h3{font-family:var(--disp);font-weight:500;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5em}
-.bz ol{padding-left:1.2em;color:var(--mut);font-size:.9rem}
-.bz .num{font-family:var(--disp);font-weight:300;font-size:1.9rem;letter-spacing:.04em;margin-bottom:.6em}
-.bz .num small{display:block;font-family:var(--body);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mut)}
-.bz button.btn{background:none;cursor:pointer}
-
-/* COLORES LLAMATIVOS */
-:root{--m:#ff2bd6;--c:#19f0ff;--l:#b6ff2b;--o:#ff8a00;--v:#8a3dff;--acc:#19f0ff;--line:rgba(120,200,255,.28)}
-#bgv{opacity:.55!important;filter:saturate(1.4) contrast(1.1)}
-@keyframes grad{to{background-position:300% 0}}
-h1{background:linear-gradient(90deg,#fff,#19f0ff,#ff2bd6,#b6ff2b,#ff8a00,#fff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 8s linear infinite;text-shadow:none;filter:drop-shadow(0 0 22px rgba(255,43,214,.55)) drop-shadow(0 0 40px rgba(25,240,255,.35))}
-h1 span{background:linear-gradient(90deg,#ff2bd6,#ff8a00,#b6ff2b,#19f0ff,#8a3dff,#ff2bd6);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-stroke:0;color:transparent;animation:grad 6s linear infinite;font-weight:800}
-h2 em{background:linear-gradient(90deg,var(--m),var(--o),var(--l),var(--c));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 7s linear infinite}
-h2{text-shadow:0 0 30px rgba(138,61,255,.5)}
-.kick,.lab{color:var(--c)!important;text-shadow:0 0 14px rgba(25,240,255,.7)}
-.tag2{color:var(--l);text-shadow:0 0 18px rgba(182,255,43,.7)}
-a.btn{border-color:var(--c);box-shadow:0 0 18px rgba(25,240,255,.35),inset 0 0 12px rgba(25,240,255,.12)}
-a.btn:hover{background:var(--c);color:#02030c;box-shadow:0 0 34px rgba(25,240,255,.8)}
-a.btn.solid,button.btn.solid{background:linear-gradient(100deg,var(--m),var(--o));border-color:transparent;color:#fff;box-shadow:0 0 28px rgba(255,43,214,.6)}
-a.btn.solid:hover,button.btn.solid:hover{background:linear-gradient(100deg,var(--c),var(--l));color:#02030c;box-shadow:0 0 36px rgba(182,255,43,.7)}
-.count{border-color:var(--m);box-shadow:0 0 30px rgba(255,43,214,.35)}
-.count b{background:linear-gradient(180deg,#fff,var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
-.marq{border-image:linear-gradient(90deg,var(--m),var(--c),var(--l),var(--o)) 1}
-.marq span:nth-child(even){-webkit-text-stroke:1px var(--m)}
-.marq span:nth-child(3n){color:var(--l)}
-.row:hover{background:linear-gradient(90deg,rgba(255,43,214,.16),transparent)}
-.row .d b{background:linear-gradient(180deg,#fff,var(--m));-webkit-background-clip:text;background-clip:text;color:transparent}
-.tag{border-color:var(--l)!important;color:var(--l)!important;text-shadow:0 0 10px rgba(182,255,43,.6)}
-.row.prog .tag{border-color:var(--v)!important;color:#c9a8ff!important;text-shadow:none}
-.lineup .dj{background:linear-gradient(180deg,#fff 10%,var(--m) 55%,var(--v));-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 0 26px rgba(255,43,214,.5))}
-.tix{border-color:var(--v);box-shadow:0 0 40px rgba(138,61,255,.35)}
-.tix b{background:linear-gradient(180deg,#fff,var(--o));-webkit-background-clip:text;background-clip:text;color:transparent}
-.tix div{border-color:rgba(138,61,255,.5)}
-.bz{border-color:var(--l);box-shadow:0 0 36px rgba(182,255,43,.25)}
-.bz .num{color:var(--l);text-shadow:0 0 22px rgba(182,255,43,.7)}
-.tilt{box-shadow:0 30px 70px -20px rgba(255,43,214,.6),0 0 0 1px var(--m)}
-.side{border-color:var(--m);box-shadow:0 0 40px rgba(255,43,214,.4)}
-.gal video{filter:saturate(1.6) contrast(1.1)}
-.wide{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.wide video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--m);box-shadow:0 0 30px rgba(255,43,214,.35)}
-.wide .w0{grid-column:1/-1;aspect-ratio:21/9;border-color:var(--c);box-shadow:0 0 40px rgba(25,240,255,.45)}
-@media(max-width:600px){.wide{grid-template-columns:1fr}.wide .w0{aspect-ratio:16/9}}
-footer a{color:var(--c)}
-nav .brand{text-shadow:0 0 14px rgba(25,240,255,.7)}
-
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-h1{background:none!important;animation:none!important;filter:none!important;margin:.3em 0 0}
-h1 .dale{height:clamp(120px,27vh,250px);width:auto;max-width:86vw;display:block;margin:0 auto;filter:drop-shadow(0 0 22px rgba(255,194,26,.55)) drop-shadow(0 0 46px rgba(255,43,214,.45));animation:pulse 3.4s ease-in-out infinite}
-@keyframes pulse{50%{filter:drop-shadow(0 0 30px rgba(255,194,26,.9)) drop-shadow(0 0 60px rgba(255,43,214,.7))}}
-.logo{height:clamp(120px,24vh,300px)!important}
-footer img.fd{width:150px;margin:0 auto 18px;display:block;filter:drop-shadow(0 0 18px rgba(255,194,26,.5))}
-
-h1 .big{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:-.03em;line-height:.95;font-size:clamp(3rem,13vw,9rem);background:linear-gradient(90deg,#fff,#19f0ff,#8a3dff,#ff2bd6,#19f0ff,#fff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 7s linear infinite;filter:drop-shadow(0 0 28px rgba(25,240,255,.55))}
-.logo{height:clamp(130px,30vh,340px)!important}
-.evt{margin:2.2em auto 0;padding:18px 26px 20px;display:inline-block;border:1px solid var(--m);background:rgba(8,10,32,.55);backdrop-filter:blur(8px);box-shadow:0 0 30px rgba(255,43,214,.3)}
-.evt small{display:block;font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
-.evt p{font-family:var(--disp);font-weight:300;font-size:.8rem;letter-spacing:.34em;text-transform:uppercase;color:var(--l);margin-top:10px}
-h1 .dale,.evt .dale{height:clamp(70px,13vh,130px)!important;width:auto;display:block;margin:0 auto;filter:drop-shadow(0 0 16px rgba(255,194,26,.55))}
-.lineup .dj{background:linear-gradient(180deg,#fff 10%,var(--c) 55%,var(--v))!important;-webkit-background-clip:text!important;background-clip:text!important}
-.igs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.igs iframe{width:100%;height:560px;border:1px solid var(--c);background:#fff;box-shadow:0 0 28px rgba(25,240,255,.35)}
-@media(max-width:1000px){.igs{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.igs{grid-template-columns:1fr}.igs iframe{height:600px}}
-
-.sideL{display:none}
-@media(min-width:1440px){
- header,main,footer,.marq{margin-left:290px}
- .sideL{display:flex;flex-direction:column;gap:12px;position:fixed;z-index:12;top:74px;left:14px;bottom:14px;width:264px;padding:14px;background:var(--card);border:1px solid var(--c);box-shadow:0 0 36px rgba(25,240,255,.3);backdrop-filter:blur(12px);overflow:auto;scrollbar-width:none}
- .sideL::-webkit-scrollbar{display:none}
- .sideL small{font-size:.58rem;letter-spacing:.34em;text-transform:uppercase;color:var(--c)}
- .sideL ul{list-style:none;padding:0;display:grid;gap:8px}
- .sideL li a{display:grid;grid-template-columns:46px 1fr;gap:10px;align-items:center;text-decoration:none;color:var(--fg);padding:8px;border:1px solid var(--line);transition:border-color .2s,background .2s}
- .sideL li a:hover{border-color:var(--m);background:rgba(255,43,214,.12)}
- .sideL li.nw a{border-color:var(--m)}
- .sideL .dd{text-align:center;font-family:var(--disp);line-height:1}.sideL .dd b{display:block;font-size:1.3rem;font-weight:800}.sideL .dd i{font-style:normal;font-size:.5rem;letter-spacing:.2em;color:var(--c);text-transform:uppercase}
- .sideL .tt{font-size:.74rem;line-height:1.25}.sideL .tt em{display:block;font-style:normal;font-size:.62rem;color:var(--mut);margin-top:2px}
- .sideL a.btn{text-align:center;padding:12px 10px;font-size:.58rem;margin-top:auto}
-}
-.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.chips li{padding:9px 18px;border:1px solid var(--c);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;box-shadow:0 0 14px rgba(25,240,255,.3);background:rgba(8,10,32,.5)}
-.car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;scrollbar-width:thin}
-.car iframe{flex:0 0 min(300px,78vw);height:540px;scroll-snap-align:start;border:1px solid var(--m);background:#fff;box-shadow:0 0 26px rgba(255,43,214,.4)}
-.ig{margin-top:3.5em;padding:34px 20px 20px;border:1px solid transparent;border-radius:24px;background:linear-gradient(rgba(8,10,32,.7),rgba(8,10,32,.7)) padding-box,linear-gradient(120deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5) border-box;backdrop-filter:blur(8px);overflow:hidden}
-.igh{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px}
-.igh img{width:64px;height:64px;border-radius:50%;padding:3px;background:linear-gradient(45deg,#feda75,#d62976,#4f5bd5);object-fit:contain}
-.igh b{display:block;font-family:var(--disp);font-size:1.05rem;font-weight:500}
-.igh span{display:block;color:var(--mut);font-size:.8rem}.igh em{display:block;font-style:normal;color:var(--l);font-size:.74rem;letter-spacing:.08em}
-.igh .igb{margin-left:auto;border:0;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);color:#fff;padding:12px 24px;font-size:.6rem;box-shadow:0 0 22px rgba(220,39,67,.5)}
-.phones{display:flex;gap:26px;overflow-x:auto;padding:30px 14px 36px;perspective:1400px;scroll-snap-type:x proximity;scrollbar-width:none}
-.phones::-webkit-scrollbar{display:none}
-.phone{position:relative;flex:0 0 250px;height:520px;border-radius:38px;padding:10px;background:linear-gradient(145deg,#2a2d44,#0a0b16);box-shadow:0 30px 60px -18px rgba(214,41,118,.55),0 0 0 2px #3b3f60,inset 0 0 0 1px #000;transform:rotateY(var(--ry,0deg)) translateY(var(--ty,0));transition:transform .5s cubic-bezier(.2,.8,.2,1);scroll-snap-align:center;overflow:hidden}
-.phone:nth-child(1){--ry:16deg}.phone:nth-child(2){--ry:6deg;--ty:-14px}.phone:nth-child(3){--ry:-6deg;--ty:-14px}.phone:nth-child(4){--ry:-16deg}
-.phone:hover{transform:rotateY(0) translateY(-18px) scale(1.04)}
-.phone iframe{width:100%;height:100%;border:0;border-radius:28px;background:#fff;display:block}
-.phone .notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:70px;height:18px;background:#05060d;border-radius:0 0 14px 14px;z-index:2;pointer-events:none}
-@media(min-width:1100px){.phones{justify-content:center;overflow:visible}}
-.res{display:flex;justify-content:center;gap:clamp(20px,6vw,90px);flex-wrap:wrap;margin:.3em 0}
-.res .dj{font-size:clamp(2.4rem,9vw,6rem)!important;margin-bottom:.1em!important}
-
-/* LATERALES PEQUEÑOS, AGENDA AL CENTRO */
-@media(min-width:1100px){
- header,main,footer,.marq{margin-left:228px!important;margin-right:228px!important}
- nav{padding-left:28px!important;padding-right:28px!important}
- .side,.sideL{display:flex!important;flex-direction:column;gap:10px;position:fixed;z-index:12;top:74px;bottom:14px;width:200px;padding:10px;background:var(--card);border:1px solid var(--m);box-shadow:0 0 30px rgba(255,43,214,.35);backdrop-filter:blur(12px);overflow:auto;scrollbar-width:none}
- .side::-webkit-scrollbar,.sideL::-webkit-scrollbar{display:none}
- .sideL{left:14px;right:auto;border-color:var(--c);box-shadow:0 0 30px rgba(25,240,255,.3)}
- .side{right:14px;left:auto}
- .side small,.sideL small{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c)}
- .sideL img,.side img,.side video{width:100%;display:block;border:1px solid var(--line)}
- .side video{aspect-ratio:9/16;max-height:50vh;object-fit:cover;background:#000}
- .side a.btn{padding:11px 8px;font-size:.52rem;text-align:center;margin-top:auto}
- .inl{display:none}
-}
-.cab{text-align:center}
-.eq{display:flex;gap:4px;justify-content:center;align-items:flex-end;height:46px;margin:-.2em auto 2.4em;max-width:560px}
-.eq i{flex:1;max-width:10px;height:var(--h);background:linear-gradient(var(--m),var(--c));border-radius:2px;animation:eqb var(--d) ease-in-out infinite alternate;box-shadow:0 0 8px rgba(25,240,255,.6)}
-@keyframes eqb{from{height:10%}to{height:100%}}
-.djs{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:20px;align-items:stretch}
-@media(max-width:860px){.djs{grid-template-columns:1fr}}
-.dc{position:relative;border:1px solid var(--c);background:linear-gradient(160deg,rgba(25,240,255,.1),rgba(138,61,255,.18) 60%,rgba(3,4,16,.9));padding:38px 18px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;overflow:hidden;box-shadow:0 0 34px rgba(25,240,255,.25);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
-.dc:hover{transform:translateY(-8px) rotateX(3deg);box-shadow:0 20px 50px rgba(255,43,214,.45)}
-.dc .role{position:absolute;top:12px;left:12px;padding:4px 12px;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;border:1px solid var(--l);color:var(--l);background:rgba(3,4,16,.6);z-index:3}
-.dc .role.inv{border-color:var(--m);color:#fff;background:linear-gradient(100deg,var(--m),var(--o))}
-.dc h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(1.6rem,3.4vw,2.4rem);background:linear-gradient(90deg,#fff,var(--c),var(--m));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.05}
-.dc p{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
-.vinyl{position:relative;width:min(190px,70%);aspect-ratio:1;border-radius:50%;margin:18px 0 10px;background:repeating-radial-gradient(circle,#0a0b16 0 3px,#171a30 3px 5px),conic-gradient(from 0deg,#111,#333,#111,#222,#111);box-shadow:0 0 0 3px #222,0 0 40px rgba(255,43,214,.5);animation:spin 5s linear infinite;display:grid;place-items:center}
-.vinyl:before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 20%,rgba(255,255,255,.18) 25%,transparent 32% 70%,rgba(25,240,255,.2) 75%,transparent 82%)}
-.vinyl.rev2{animation-direction:reverse;animation-duration:6.5s}
-.vinyl b{width:36%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-family:var(--disp);font-size:1.6rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--m),var(--o))}
-@keyframes spin{to{transform:rotate(360deg)}}
-.dc.big{padding:0;min-height:520px;justify-content:flex-end;border-color:var(--m);box-shadow:0 0 44px rgba(255,43,214,.45)}
-.dc.big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%}
-.dc.big .ov{position:relative;z-index:2;width:100%;padding:70px 18px 22px;background:linear-gradient(transparent,rgba(3,4,16,.92) 55%)}
-@media(prefers-reduced-motion:reduce){.vinyl,.eq i{animation:none}}
-.btn.wa,a.btn.wa{background:linear-gradient(100deg,#25d366,#128c7e)!important;border-color:transparent!important;color:#fff!important;box-shadow:0 0 26px rgba(37,211,102,.55)!important}
-a.btn.wa:hover{background:linear-gradient(100deg,#4ff08d,#25d366)!important;color:#021008!important}
-.djs{grid-template-columns:1fr 1.2fr 1fr!important;align-items:stretch}
-.dc{min-height:470px;padding:46px 16px 26px!important;justify-content:space-between!important;gap:0!important}
-.dc:hover{transform:translateY(-6px)!important}
-.dc .vinyl{width:min(170px,68%);margin:6px auto}
-.dc .nm{width:100%;border-top:1px solid var(--line);padding-top:16px}
-.dc .nm h3{font-size:clamp(1.4rem,2.6vw,2rem)}
-.dc .nm p,.dc.big .ov p{margin-top:6px}
-.dc.big{padding:0!important;min-height:470px;justify-content:flex-end!important}
-.dc.big .ov{text-align:center}
-.cab .s{max-width:560px;margin:2.2em auto 0;color:var(--mut);text-align:center}
-@media(max-width:860px){.dc,.dc.big{min-height:0}.dc.big{min-height:460px}.djs{grid-template-columns:1fr!important}}
-.phone{flex:0 0 270px!important;height:auto!important;padding:10px!important}
-.phone .scr{position:relative;width:250px;height:444px;overflow:hidden;border-radius:30px;background:#000}
-.phone iframe{position:absolute!important;top:-78px;left:0;width:250px!important;height:640px!important;transform:scale(1.42);transform-origin:50% 0;border-radius:0!important;background:#000!important}
-.phone .notch{display:none}
-.mini{position:relative;flex:0 0 auto;width:180px;height:320px;margin:0 auto;overflow:hidden;border-radius:22px;border:3px solid #2a2d44;background:#000;box-shadow:0 0 18px rgba(214,41,118,.45)}
-.mini iframe{position:absolute;top:-56px;left:0;width:180px;height:480px;border:0;transform:scale(1.42);transform-origin:50% 0;background:#000}
-@media(min-width:1100px){.main-ig,#ambiente .ig{display:none!important}}
-.dc h3,.dc.big .ov h3{font-family:'Tilt Neon','Unbounded',sans-serif!important;font-weight:400!important;text-transform:none!important;letter-spacing:.02em;font-size:clamp(2.6rem,6vw,4.4rem)!important;line-height:1;background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#fff!important;animation:flick 5s infinite}
-.djs .dc:nth-child(1) h3{text-shadow:0 0 6px #fff,0 0 18px var(--c),0 0 40px var(--c),0 0 80px var(--c)}
-.djs .dc:nth-child(2) h3{text-shadow:0 0 6px #fff,0 0 18px var(--m),0 0 40px var(--m),0 0 80px var(--m)}
-.djs .dc:nth-child(3) h3{text-shadow:0 0 6px #fff,0 0 18px var(--l),0 0 40px var(--l),0 0 80px var(--l)}
-.dc .nm p,.dc.big .ov p{font-family:var(--body);font-weight:500;font-size:.78rem!important;letter-spacing:.34em!important}
-.dc.big .ov{padding-top:90px!important}
-@keyframes flick{0%,18%,22%,62%,100%{opacity:1}20%{opacity:.82}64%{opacity:.9}66%{opacity:1}}
-@media(prefers-reduced-motion:reduce){.dc h3{animation:none}}
-.hl{display:grid;grid-template-columns:minmax(0,.9fr) 1.1fr;gap:clamp(20px,4vw,48px);align-items:center;text-align:left;margin-top:10px}
-@media(max-width:860px){.hl{grid-template-columns:1fr;text-align:center}.hl-tx .chips,.hl-tx .btns{justify-content:center!important}}
-.hl-img{position:relative;border:1px solid var(--m);box-shadow:0 0 50px rgba(255,43,214,.45),0 0 0 6px rgba(255,43,214,.08);max-width:420px;margin:0 auto;transform:rotate(-1.5deg);transition:transform .5s}
-.hl-img:hover{transform:rotate(0) scale(1.02)}
-.hl-img img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:50% 36%}
-.hl-img .role,.hl .role{position:absolute;top:12px;left:12px;padding:5px 14px;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:#fff;background:linear-gradient(100deg,var(--m),var(--o))}
-.hl .kk{font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--l);text-shadow:0 0 12px rgba(182,255,43,.6)}
-.neon{font-family:'Tilt Neon','Unbounded',sans-serif;font-weight:400;color:#fff;line-height:1;margin:.15em 0;animation:flick 5s infinite}
-.hl .neon{font-size:clamp(3.4rem,9vw,7rem)}
-.neon.m{text-shadow:0 0 6px #fff,0 0 20px var(--m),0 0 46px var(--m),0 0 90px var(--m)}
-.neon.c{text-shadow:0 0 6px #fff,0 0 20px var(--c),0 0 46px var(--c),0 0 90px var(--c)}
-.neon.l{text-shadow:0 0 6px #fff,0 0 20px var(--l),0 0 46px var(--l),0 0 90px var(--l)}
-.hl .sub2{font-family:var(--disp);font-weight:300;font-size:.95rem;letter-spacing:.34em;text-transform:uppercase;color:var(--c);margin-bottom:1em}
-.hl .body{color:var(--mut);max-width:480px;margin-bottom:1.2em}
-.resids{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:6px}
-@media(max-width:760px){.resids{grid-template-columns:1fr}}
-.rs{display:flex;align-items:center;gap:22px;text-align:left;padding:22px 26px;border:1px solid var(--line);background:linear-gradient(100deg,rgba(25,240,255,.1),rgba(8,10,32,.7));transition:border-color .3s,transform .3s}
-.rs:hover{border-color:var(--c);transform:translateY(-4px)}
-.rs .neon{font-size:clamp(2.4rem,5.5vw,3.8rem)}
-.rs p{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);margin-top:6px}
-.vinyl.sm{flex:0 0 96px;width:96px!important;margin:0!important}
-.vinyl.sm b{font-size:1.1rem}
-.hl{grid-template-columns:1fr!important;text-align:center!important;justify-items:center}
-.hl .body{margin-left:auto;margin-right:auto}
-.hl-tx .chips,.hl-tx .btns{justify-content:center!important}
-.hl .neon{font-size:clamp(4rem,13vw,9.5rem)!important}
-.lu{text-align:center}
-.lu .lab{justify-content:center}
-.lu-row{padding:46px 0;border-top:1px solid var(--line)}
-.lu-row:last-child{border-bottom:1px solid var(--line)}
-.lu-k{display:block;font-size:.68rem;letter-spacing:.5em;text-transform:uppercase;color:var(--mut);margin-bottom:18px}
-.lu-n{font-family:var(--disp);font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:-.02em;color:#fff;margin:0}
-.lu-main{font-size:clamp(3rem,11vw,8.2rem);text-shadow:0 0 40px rgba(25,240,255,.25)}
-.lu-res{font-weight:500;font-size:clamp(1.7rem,5.6vw,4rem);letter-spacing:.02em;color:#fff}
-.lu-res i{font-style:normal;font-weight:300;color:var(--c);margin:0 .5em}
-.lu-n{font-family:'Anton','Impact',sans-serif!important;font-weight:400!important;letter-spacing:.03em!important}
-.lu-main{font-size:clamp(4.2rem,17vw,13rem)!important;line-height:.92!important}
-.lu-res{font-size:clamp(2.4rem,8vw,5.6rem)!important;letter-spacing:.06em!important;font-weight:400!important}
-.lu-res i{font-family:var(--body);font-weight:200}
-.lu-t{margin-top:22px;font-family:var(--disp);font-weight:500;font-size:clamp(.72rem,2vw,1rem);letter-spacing:.34em;text-transform:uppercase;color:var(--c);text-shadow:0 0 14px rgba(25,240,255,.45)}
+/* BURBUJA DE MESAS VIP (Eden) */
+.chat{position:fixed;right:16px;bottom:16px;z-index:25;display:flex;align-items:flex-end;gap:12px}
+.chat .tip{max-width:250px;background:var(--wh);color:var(--bk);padding:14px 16px;font-size:.95rem;line-height:1.4;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:opacity .3s,transform .3s;transform-origin:bottom right}
+.chat .tip[hidden]{display:block;opacity:0;transform:scale(.9);pointer-events:none}
+.chat .tip button{float:right;margin:-4px -4px 4px 8px;background:none;border:0;font-size:1.3rem;line-height:1;cursor:pointer;color:#555}
+.chat .b{flex:none;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.chat .b svg{width:32px;height:32px;fill:#fff}
+@media(max-width:520px){.chat .tip{max-width:200px;font-size:.88rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<video id="bgv" src="bg_escape.mp4" autoplay muted loop playsinline></video>
-<div id="veil"></div>
-<canvas id="gl"></canvas>
 
-<nav>
-  <a class="brand" href="#top"><img src="logo-satelite.png" alt="">Satélite Disco</a>
-  <ul><li><a href="#agenda">Agenda</a></li><li><a href="#ambiente">Ambiente</a></li><li><a href="#lineup">Line-up</a></li><li><a href="#tickets">Entradas</a></li><li><a href="#mapa">Ubicación</a></li></ul>
-  <a class="btn wa" style="padding:11px 24px" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar</a>
-</nav>
-
-<aside class="sideL" id="sideL">
-  <small>Esta noche · 23 Oct</small>
-  <a href="flyer.jpg" target="_blank" rel="noopener"><img src="flyer.jpg" alt="Flyer 23 octubre"></a>
-  <small>Vie 9 Oct</small>
-  <a href="bellaqueo.jpg" target="_blank" rel="noopener"><img src="bellaqueo.jpg" alt="Flyer Noche de Bellaqueo"></a>
-  <a class="btn" href="https://www.instagram.com/satelitebilbao/">Instagram Satélite</a>
-  <ul id="nextev" style="display:none"></ul>
-</aside>
-<aside class="side" id="side">
-  <small>Vídeo promo · 23 Oct</small>
-  <video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video>
-  <a class="btn" href="https://www.instagram.com/satelitebilbao/">@satelitebilbao</a>
-  <a class="btn wa" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar por WhatsApp</a>
-</aside>
-
-<header class="hero" id="top">
-  <div>
-    <img class="logo" src="logo-satelite.png" alt="Satélite Disco Bar">
-    <p class="kick">Discoteca · Bilbao</p>
-    <h1><span class="sr">Satélite Disco Bar</span><span class="big" aria-hidden="true">Satélite</span></h1>
-    <p class="tag2">Disco Bar · Ribera de Botica Vieja</p>
-    <div class="evt">
-      <small>Esta noche en Satélite · Evento</small>
-      <img class="dale" src="logo-dale.png" alt="Dale Reggaeton">
-      <p>Reggaeton del viejo · Old School</p>
-    </div>
-    <div class="meta"><span>Viernes 23 · 10 · 2026</span><i>/</i><span>23:00 — 06:00</span><i>/</i><span>Bilbao</span></div>
-    <div class="count">
-      <div><b id="cd">--</b><small>días</small></div><div><b id="ch">--</b><small>horas</small></div><div><b id="cm">--</b><small>min</small></div><div><b id="cs">--</b><small>seg</small></div>
-    </div>
-    <div class="btns">
-      <a class="btn solid" href="#agenda">Agenda</a>
-      <a class="btn" href="#tickets">Entradas y mesas</a>
-    </div>
-    <p class="scroll">Scroll</p>
-  </div>
+<header class="top">
+  <a class="logo" href="#top" aria-label="Satélite Disco Bar, inicio"><img src="logo-satelite.png" alt="" width="48" height="48">Satélite</a>
+  <button class="burger" id="mbtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
 </header>
 
-<div class="marq"><div id="mq"></div></div>
+<nav class="menu" id="menu" aria-label="Menú">
+  <button class="close" id="mclose" type="button" aria-label="Cerrar menú">×</button>
+  <ul>
+    <li><a href="#eventos">Eventos</a></li>
+    <li><a href="#universidad">Universidad del Perreo</a></li>
+    <li><a href="#vip">Mesas</a></li>
+    <li><a href="#satelite">Satélite</a></li>
+    <li><a href="#mapa">Cómo llegar</a></li>
+    <li><a href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite">Reservar</a></li>
+  </ul>
+</nav>
 
-<main>
-<section id="agenda" class="rev">
-  <p class="lab">Agenda</p>
-  <h2>Agenda <em>Satélite</em></h2>
-  <div>
-    <article class="row bell">
-      <div class="d"><small style="display:block;margin-bottom:6px">Vie · Oct 9</small><a href="bellaqueo.jpg" target="_blank" rel="noopener"><img src="bellaqueo.jpg" alt="Flyer Noche de Bellaqueo en Satélite" loading="lazy"></a></div>
+<section class="hero" id="top" style="padding:0">
+  <video src="bg_escape.mp4" poster="flyer-story.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+  <div class="in">
+    <img class="sat" src="logo-satelite.png" alt="Satélite Disco Bar" width="300" height="300">
+    <p>Discoteca en Bilbao · Reggaeton y latino</p>
+  </div>
+</section>
+
+<div class="wall" aria-hidden="false">
+  <div class="rows" id="rows" aria-hidden="true"></div>
+  <div class="orb">
+    <div class="disc"><video src="promo.mp4" poster="flyer-story.jpg" autoplay muted loop playsinline aria-label="Vídeo promocional de Satélite"></video></div>
+    <img class="stk s1" src="logo-satelite.png" alt="" width="200" height="200">
+    <img class="stk s2" src="logo-dale.png" alt="Dale Reggaeton" width="300" height="185">
+    <span class="stk s3">Vie 23 Oct</span>
+    <span class="stk s4">Casanova<br>desde Ámsterdam</span>
+  </div>
+</div>
+
+<section id="eventos">
+  <div class="wrap">
+    <h2>Próximos eventos</h2>
+    <article class="ev">
+      <a class="poster" href="flyer.jpg" target="_blank" rel="noopener"><img src="flyer.jpg" alt="Cartel de Dale Reggaeton en Satélite, viernes 23 de octubre" width="1080" height="1350" loading="lazy"></a>
       <div>
-        <span class="tag">Este viernes · 9 de octubre</span>
-        <h3>Noche de Bellaqueo</h3>
-        <p>Todo el reggaetón de la mata para que bailes toda la noche · Satélite Disco Bar, Bilbao<br>DJ Faver 505 + DJ Edwin · <b style="color:var(--l)">Entrada GRATIS toda la noche</b><br>Oferta botella de ron + cachimba · 70 €</p>
+        <p class="when">Viernes 23 octubre</p>
+        <h3>Dale Reggaeton</h3>
+        <p class="who">Reggaeton del viejo con <b>Casanova</b>, DJ invitado desde Ámsterdam, y los residentes <b>Faver 505</b> y <b>Edwin</b>.</p>
+        <dl>
+          <dt>Hora</dt><dd>23:00 a 06:00</dd>
+          <dt>Entrada</dt><dd>10 € con copa</dd>
+          <dt>Botellas</dt><dd>2 botellas + cachimba por 70 €, hasta las 02:00</dd>
+        </dl>
+        <div class="btns">
+          <a class="btn" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar</a>
+          <a class="btn ghost" id="gcal" href="#" target="_blank" rel="noopener">Añadir al calendario</a>
+        </div>
       </div>
-      <div class="acts"><a class="btn solid" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20para%20la%20Noche%20de%20Bellaqueo">Reservar · 602 34 19 60</a></div>
     </article>
-    <div id="aglist"></div>
-    <div class="btns"><button class="btn" id="agmore" type="button" style="background:none;cursor:pointer">Ver más fines de semana</button></div>
   </div>
 </section>
 
-<section class="rev stage">
-  <div class="grid inl">
-    <div class="tilt"><img src="flyer.jpg" alt="Flyer oficial" loading="lazy"><i class="glare"></i></div>
-    <div class="tilt"><video src="promo.mp4" controls playsinline preload="none" poster="flyer-story.jpg"></video><i class="glare"></i></div>
+<section class="uni" id="universidad">
+  <div class="wrap">
+    <article class="ev">
+      <a class="poster" href="universidad-perreo.jpg" target="_blank" rel="noopener"><img src="universidad-perreo.jpg" alt="Cartel de La Universidad del Perreo, todos los viernes en Satélite Disco Bar, Deusto" width="1080" height="1350" loading="lazy"></a>
+      <div>
+        <p class="when">Todos los viernes</p>
+        <h3>La Universidad del Perreo</h3>
+        <p class="who">Cada viernes, Satélite se convierte en aula. Reggaeton antiguo y más, los clásicos que te sabes de memoria y que se bailan hasta abajo. Aquí no se viene a mirar: se viene a aprender, y la única asignatura se aprueba en la pista.</p>
+        <ul class="tags"><li>Clase de perreo</li><li>Old school reggaeton</li><li>Solo clásicos</li><li>Hasta abajo</li></ul>
+        <div class="btns">
+          <a class="btn" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20mesa%20para%20La%20Universidad%20del%20Perreo%20este%20viernes">Reservar para este viernes</a>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 
-<section id="ambiente" class="rev" style="max-width:1280px">
-  <p class="lab">Noche tras noche</p>
-  <h2>Vive <em>Satélite</em></h2>
-  <ul class="chips"><li>Local climatizado</li><li>Cachimbas · hookah</li><li>Copas y botellas</li><li>Buen ambiente</li><li>Reggaeton · Crossover · Latin</li></ul>
-  <div class="btns"><a class="btn" href="https://www.instagram.com/satelitebilbao/">Síguenos en @satelitebilbao</a></div>
-</section>
-
-<section id="lineup" class="lu rev">
-  <p class="lab">Line-up</p>
-  <div class="lu-row">
-    <span class="lu-k">Invitado · Vie 23 Oct</span>
-    <h3 class="lu-n lu-main">Casanova</h3>
-    <p class="lu-t">El mejor DJ de reggaeton del Benelux</p>
-  </div>
-  <div class="lu-row">
-    <span class="lu-k">Residentes</span>
-    <h3 class="lu-n lu-res">Faver 505<i>/</i>Edwin</h3>
-  </div>
-</section>
-
-<section id="tickets" class="rev">
-  <p class="lab">Entradas &amp; mesas</p>
-  <h2>Reserva en <em>Satélite</em></h2>
-  <div class="tix">
-    <div><small>Entrada</small><b>10<sup>€</sup></b><p>Incluye copa. Acceso toda la noche.</p></div>
-    <div><small>Botella · Antioqueño / Amarillo</small><b>70<sup>€</sup></b><p>Promoción válida hasta las 2:00.</p></div>
-    <div><small>Botella · Ron Barceló</small><b>70<sup>€</sup></b><p>Promoción válida hasta las 2:00.</p></div>
-  </div>
-  <div class="bz">
-    <div>
-      <h3>Reserva por Bizum</h3>
-      <ol>
-        <li>Haz el Bizum de tu botella o entrada.</li>
-        <li>Concepto: tu nombre + fecha (ej. “Juan 23 oct”).</li>
-        <li>Envía el comprobante por WhatsApp y te confirmamos la reserva.</li>
-      </ol>
+<section class="vip" id="vip">
+  <div class="wrap">
+    <h2>Mesas y botellas</h2>
+    <div class="prices">
+      <div><small>Entrada</small><b>10 €</b><p>Con una copa incluida</p></div>
+      <div><small>Antioqueño o Amarillo</small><b>70 €</b><p>2 botellas + cachimba</p></div>
+      <div><small>Ron Barceló</small><b>70 €</b><p>2 botellas + cachimba</p></div>
     </div>
-    <div>
-      <div class="num"><small>Bizum al</small>602 34 19 60</div>
-      <button class="btn solid" id="bzcopy" type="button">Copiar número</button>
-      <a class="btn" style="margin-top:10px" href="https://wa.me/34602341960?text=Hola%2C%20acabo%20de%20hacer%20el%20Bizum%20para%20el%2023%20de%20octubre.%20Adjunto%20comprobante.">Enviar comprobante</a>
-    </div>
-  </div>
-  <p class="note">Reservas y mesas por WhatsApp: <a href="tel:+34602341960" style="color:var(--fg)">602 34 19 60</a>.</p>
-  <div class="btns" style="justify-content:flex-start"><a class="btn wa" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar por WhatsApp · 602 34 19 60</a><a class="btn" href="https://www.instagram.com/satelitebilbao/">Instagram</a></div>
-</section>
-
-<section id="mapa" class="map rev">
-  <p class="lab">Ubicación</p>
-  <h2>Cómo <em>llegar</em></h2>
-  <iframe loading="lazy" title="Mapa Satélite Bilbao" src="https://www.google.com/maps?q=Ribera+de+Botica+Vieja+3,+48014+Bilbao&output=embed"></iframe>
-  <div class="addr">
-    <p>Satélite Disco Bar<span>Ribera de Botica Vieja 3 · 48014 Bilbao</span></p>
-    <div class="acts" style="display:flex;gap:12px;flex-wrap:wrap">
-      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Satelite+Disco+Bar+Ribera+de+Botica+Vieja+3+Bilbao">Abrir en Maps</a>
-      <a class="btn" href="https://wa.me/?text=Reggaeton%20del%20viejo%20%C2%B7%20Sat%C3%A9lite%20Bilbao%20%C2%B7%20vie%2023%20oct%20%C2%B7%2023%3A00">Compartir</a>
+    <div class="bizum">
+      <h3>Reserva con Bizum</h3>
+      <p>Haz el Bizum, pon en el concepto tu nombre y la fecha, y mándanos el comprobante por WhatsApp. Te confirmamos la mesa al momento.</p>
+      <p class="num">602 34 19 60</p>
+      <div class="btns">
+        <button class="btn" id="bzcopy" type="button">Copiar número</button>
+        <a class="btn ghost" href="https://wa.me/34602341960?text=Hola%2C%20acabo%20de%20hacer%20el%20Bizum.%20Adjunto%20comprobante.">Enviar comprobante</a>
+      </div>
     </div>
   </div>
 </section>
-</main>
+
+<section class="about" id="satelite">
+  <div class="wrap">
+    <h2>Satélite</h2>
+    <p>Satélite Disco Bar está en Ribera de Botica Vieja, junto a la ría de Bilbao. Viernes y sábados abrimos con reggaeton, crossover y música latina, de la mano de los residentes Faver 505 y Edwin.</p>
+    <p>Local climatizado, cachimbas, copas y botellas. Las próximas fechas las anunciamos en Instagram.</p>
+    <div class="btns"><a class="btn" href="https://www.instagram.com/satelitebilbao/">Ver todos los eventos</a></div>
+  </div>
+</section>
+
+<section class="map" id="mapa" style="padding-top:0">
+  <iframe loading="lazy" title="Mapa de Satélite Disco Bar en Bilbao" src="https://www.google.com/maps?q=Ribera+de+Botica+Vieja+3,+48014+Bilbao&output=embed"></iframe>
+</section>
 
 <footer>
-  <img src="logo-satelite.png" alt="Satélite" style="width:170px">
-  <div class="soc"><a href="https://www.instagram.com/satelitebilbao/">@satelitebilbao</a></div>
-  <small style="margin-bottom:10px">Evento Dale Reggaeton · <a href="https://instagram.com/dalereggaetoneu" style="font-size:inherit;letter-spacing:.1em;text-transform:none">@dalereggaetoneu</a></small><small>Consumo responsable · Solo mayores de edad</small>
+  <div class="wrap">
+    <img class="mark" src="logo-satelite.png" alt="Satélite Disco Bar" width="150" height="150" loading="lazy">
+    <div class="soc">
+      <a href="https://www.instagram.com/satelitebilbao/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
+      <a href="https://wa.me/34602341960" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1121.8 12 9.8 9.8 0 0112 21.8zM12 0a12 12 0 00-10.3 18.1L0 24l6.1-1.6A12 12 0 1012 0z"/></svg></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Satelite+Disco+Bar+Ribera+de+Botica+Vieja+3+Bilbao" aria-label="Google Maps"><svg viewBox="0 0 24 24"><path d="M12 0C7.6 0 4 3.6 4 8c0 6 8 16 8 16s8-10 8-16c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg></a>
+    </div>
+    <h4>Dirección</h4>
+    <p>Ribera de Botica Vieja 3<br>48014 Bilbao, Bizkaia</p>
+    <h4>Reservas y VIP</h4>
+    <p><a href="tel:+34602341960">+34 602 34 19 60</a><br>WhatsApp y Bizum</p>
+    <h4>Abrimos</h4>
+    <p>Viernes y sábados por la noche</p>
+    <small>Evento Dale Reggaeton · <a href="https://instagram.com/dalereggaetoneu">@dalereggaetoneu</a><br>Solo mayores de edad. Bebe con responsabilidad.</small>
+  </div>
 </footer>
-<div class="bar"><a class="btn" href="#agenda">Satélite · Vie 23 Oct</a></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<div class="chat">
+  <div class="tip" id="tip" hidden><button type="button" id="tipx" aria-label="Cerrar">×</button>¿Quieres una mesa VIP? Escríbenos la fecha y cuántos sois.</div>
+  <a class="b" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20una%20mesa%20VIP%20en%20Sat%C3%A9lite.%20Fecha%3A%20%20Personas%3A%20" aria-label="Reservar mesa por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1121.8 12 9.8 9.8 0 0112 21.8zM12 0a12 12 0 00-10.3 18.1L0 24l6.1-1.6A12 12 0 1012 0z"/></svg></a>
+</div>
+
 <script>
 (function(){
- var h1=document.querySelector('h1'),mx=0,my=0;
- var mq=document.getElementById('mq'),w='<span>Satélite Disco Bar</span><span>Bilbao</span><span>Evento Dale Reggaeton</span><span>Satélite</span><span>23 Oct</span><span>DJ Faver 505</span><span>Casanova</span><span>Reggaeton del viejo</span>';mq.innerHTML=w+w+w+w;
- function pt(x,y){mx=(x/innerWidth-.5)*2;my=(y/innerHeight-.5)*2}
- addEventListener('mousemove',function(e){pt(e.clientX,e.clientY)});
- addEventListener('deviceorientation',function(e){if(e.gamma!=null){mx=Math.max(-1,Math.min(1,e.gamma/30));my=Math.max(-1,Math.min(1,(e.beta-45)/30))}});
+  var $=function(i){return document.getElementById(i)};
 
- /* agenda generada: confirmado 23 oct + programación habitual vie/sáb hasta fin de año */
- (function(){var M=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],W=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],box=document.getElementById('aglist'),h='',n=0,now=new Date();now.setHours(0,0,0,0);
-  for(var d=new Date(2026,9,9);d<=new Date(2026,11,31);d.setDate(d.getDate()+1)){
-   var w=d.getDay();if((w!==5&&w!==6)||d<now||(d.getMonth()==9&&d.getDate()==9))continue;
-   var conf=d.getMonth()==9&&d.getDate()==23,fri=w===5,hid=n>=8?' hid':'';n++;
-   var dt='<div class="d"><small>'+W[w]+' · '+M[d.getMonth()]+'</small><b>'+d.getDate()+'</b></div>';
-   if(conf)h+='<article class="row">'+dt+'<div><span class="tag">Próxima cita · Evento especial</span><h3>Satélite presenta · Evento Dale Reggaeton</h3><p>Reggaeton del viejo · 23:00 – 06:00 · Satélite Disco Bar, Bilbao · DJ Faver 505 (residente) + Casanova (invitado)</p></div><div class="acts"><a class="btn wa" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite%20para%20el%2023%20de%20octubre">Reservar WhatsApp</a><a class="btn" id="gcal" href="#" target="_blank" rel="noopener">Google Calendar</a><a class="btn" id="ics" href="#">.ics</a></div></article>';
-   else h+='<article class="row prog'+hid+'">'+dt+'<div><span class="tag" style="border-color:var(--mut);color:var(--mut)">Programación habitual · por confirmar</span><h3>'+(fri?'Satélite · Viernes Reggaeton Old School vs Actual':'Satélite · Sábado Latin Party')+'</h3><p>23:30 · Satélite Disco · DJ Faver 505 + DJ Edwin'+(fri?'':' · Entrada 10 € con consumición')+'</p></div></article>'}
-  box.innerHTML=h;
-  var nx=document.getElementById('nextev'),L='<li class="nw"><a href="#agenda"><div class="dd"><b>—</b><i>Fecha ?</i></div><div class="tt">Noche de Bellaqueo<em>Entrada gratis · Faver 505 + Edwin</em></div></a></li>',c=0;
-  document.querySelectorAll('#aglist .row').forEach(function(r){if(c>=8)return;var d=r.querySelector('.d'),t=r.querySelector('h3').textContent,sub=r.querySelector('p').textContent.split('·')[0],sm=d.querySelector('small').innerText.split('·');c++;
-   L+='<li'+(r.querySelector('#gcal')?' class="nw"':'')+'><a href="#agenda"><div class="dd"><b>'+d.querySelector('b').innerText+'</b><i>'+(sm[1]||'').trim()+'</i></div><div class="tt">'+t.replace('Satélite · ','')+'<em>'+sm[0].trim()+' · '+sub.trim()+'</em></div></a></li>'});
-  nx.innerHTML=L;
-  var mb=document.getElementById('agmore');
-  if(!document.querySelector('.row.hid'))mb.parentNode.style.display='none';
-  mb.onclick=function(){document.querySelectorAll('.row.hid').forEach(function(e){e.classList.remove('hid')});mb.parentNode.style.display='none'}})();
- var ev={t:'Satélite Disco Bar · Evento Dale Reggaeton (reggaeton del viejo)',l:'Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao',d:'DJ residente Faver 505 · DJ invitado Casanova. Entrada 10 € con copa. Botella 70 € hasta las 2:00.'};
- document.getElementById('gcal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(ev.t)+'&dates=20261023T230000/20261024T060000&ctz=Europe/Madrid&location='+encodeURIComponent(ev.l)+'&details='+encodeURIComponent(ev.d);
- var ics='BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Dale Reggaeton//ES\r\nBEGIN:VEVENT\r\nUID:satelite-bilbao-20261023@dalereggaeton\r\nDTSTAMP:20261006T000000Z\r\nDTSTART;TZID=Europe/Madrid:20261023T230000\r\nDTEND;TZID=Europe/Madrid:20261024T060000\r\nSUMMARY:'+ev.t+'\r\nLOCATION:'+ev.l.replace(/,/g,'\\,')+'\r\nDESCRIPTION:'+ev.d+'\r\nEND:VEVENT\r\nEND:VCALENDAR';
- var ai=document.getElementById('ics');ai.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));ai.download='satelite-bilbao-23-oct.ics';
- var T=new Date('2026-10-23T23:00:00+02:00').getTime();
- function tick(){var s=Math.floor(Math.max(0,T-Date.now())/1000);
-  cd.textContent=Math.floor(s/86400);ch.textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');
-  cm.textContent=String(Math.floor(s%3600/60)).padStart(2,'0');cs.textContent=String(s%60).padStart(2,'0')}
- tick();setInterval(tick,1000);
- document.querySelectorAll('.tilt').forEach(function(t){
-  t.addEventListener('mousemove',function(e){var r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-   t.style.transform='rotateY('+((x-.5)*14)+'deg) rotateX('+((.5-y)*14)+'deg) scale(1.02)';t.style.setProperty('--gx',x*100+'%');t.style.setProperty('--gy',y*100+'%')});
-  t.addEventListener('mouseleave',function(){t.style.transform=''})});
- var io=new IntersectionObserver(function(a){a.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
- document.querySelectorAll('.rev').forEach(function(e){io.observe(e)});
- var bz=document.getElementById('bzcopy');bz.onclick=function(){var n='602341960';(navigator.clipboard?navigator.clipboard.writeText(n):Promise.reject()).then(function(){bz.textContent='Copiado ✓'},function(){bz.textContent=n});setTimeout(function(){bz.textContent='Copiar número'},2500)};
- var bgv=document.getElementById('bgv');
- addEventListener('scroll',function(){bgv.style.opacity=Math.max(.06,.32-scrollY/innerHeight*.3)});
+  /* palabra gigante repetida */
+  var row='<span>Perreo</span><span>Satélite</span><span>Perreo</span><span>Satélite</span>',r='';
+  for(var i=0;i<7;i++)r+='<div>'+row+row+row+'</div>';
+  $('rows').innerHTML=r;
 
- if(!window.THREE)return;
- var M=THREE,R=new M.WebGLRenderer({canvas:document.getElementById('gl'),antialias:true,alpha:true});
- R.setPixelRatio(Math.min(devicePixelRatio,2));
- var S=new M.Scene();
- var C=new M.PerspectiveCamera(50,1,.1,300);C.position.set(0,0,14);
- S.add(new M.AmbientLight(0x6070ff,.7));
- var sun=new M.DirectionalLight(0xffffff,1.3);sun.position.set(6,8,8);S.add(sun);
- var pl1=new M.PointLight(0x7aa2ff,1.4,40);S.add(pl1);
- function mat(c,o){return new M.MeshStandardMaterial(Object.assign({color:c,roughness:.45,metalness:.5},o||{}))}
+  var menu=$('menu'),mb=$('mbtn');
+  function setMenu(o){menu.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
+  mb.onclick=function(){setMenu(true)};$('mclose').onclick=function(){setMenu(false)};
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
 
- var N=1100,sg=new M.BufferGeometry(),sp=new Float32Array(N*3);
- for(var i=0;i<N;i++){sp[i*3]=(Math.random()-.5)*160;sp[i*3+1]=(Math.random()-.5)*160;sp[i*3+2]=-Math.random()*90-5}
- sg.setAttribute('position',new M.BufferAttribute(sp,3));
- var stars=new M.Points(sg,new M.PointsMaterial({color:0xffffff,size:.22,transparent:true,opacity:.8}));S.add(stars);
+  $('gcal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('Dale Reggaeton en Satélite Disco Bar')+'&dates=20261023T230000/20261024T060000&ctz=Europe/Madrid&location='+encodeURIComponent('Satélite Disco Bar, Ribera de Botica Vieja 3, 48014 Bilbao')+'&details='+encodeURIComponent('Reggaeton del viejo con Casanova (desde Ámsterdam) y los residentes Faver 505 y Edwin. Entrada 10 € con copa. Reservas por WhatsApp: 602 34 19 60.');
 
- var planet=new M.Group();
- var pm=new M.Mesh(new M.SphereGeometry(3.2,48,48),mat(0x3a5bff,{roughness:.8,metalness:.1,emissive:0x0a1450}));planet.add(pm);
- var ring=new M.Mesh(new M.RingGeometry(4.4,6.4,80),new M.MeshBasicMaterial({color:0xcfd8ff,side:M.DoubleSide,transparent:true,opacity:.28}));ring.rotation.x=1.25;planet.add(ring);
- var ring2=new M.Mesh(new M.RingGeometry(6.6,7.1,80),new M.MeshBasicMaterial({color:0x7aa2ff,side:M.DoubleSide,transparent:true,opacity:.25}));ring2.rotation.x=1.25;planet.add(ring2);
- S.add(planet);
+  var bz=$('bzcopy');
+  bz.onclick=function(){
+    (navigator.clipboard?navigator.clipboard.writeText('602341960'):Promise.reject()).then(function(){bz.textContent='Número copiado'},function(){bz.textContent='602 34 19 60'});
+    setTimeout(function(){bz.textContent='Copiar número'},2500);
+  };
 
- var sat=new M.Group(),gold=mat(0xd8c08a,{metalness:.9,roughness:.25}),blue=mat(0x2a46ff,{metalness:.6,roughness:.2,emissive:0x0a1a77});
- sat.add(new M.Mesh(new M.BoxGeometry(.9,.9,1.2),gold));
- [-1,1].forEach(function(k){var p=new M.Mesh(new M.BoxGeometry(1.7,.04,.9),blue);p.position.x=k*1.4;sat.add(p);
-  var a=new M.Mesh(new M.CylinderGeometry(.03,.03,.5,6),mat(0xcccccc));a.rotation.z=Math.PI/2;a.position.x=k*.65;sat.add(a)});
- var dish=new M.Mesh(new M.ConeGeometry(.4,.4,20,1,true),mat(0xffffff,{side:M.DoubleSide}));dish.rotation.x=-Math.PI/2;dish.position.z=.8;sat.add(dish);
- var ant=new M.Mesh(new M.CylinderGeometry(.02,.02,.7,6),mat(0xffffff));ant.position.y=.8;sat.add(ant);
- var blink=new M.Mesh(new M.SphereGeometry(.07,8,8),new M.MeshBasicMaterial({color:0xff3fa4}));blink.position.y=1.17;sat.add(blink);
- S.add(sat);
-
- var ufo=new M.Group();
- var disc=new M.Mesh(new M.SphereGeometry(1.5,32,16),mat(0xc9d2ff,{metalness:.95,roughness:.15}));disc.scale.y=.28;ufo.add(disc);
- var dome=new M.Mesh(new M.SphereGeometry(.75,24,16,0,Math.PI*2,0,Math.PI/2),new M.MeshStandardMaterial({color:0x9fb8ff,transparent:true,opacity:.6,emissive:0x2a46aa,roughness:.1}));dome.position.y=.3;ufo.add(dome);
- for(var i=0;i<10;i++){var a=i/10*Math.PI*2,b=new M.Mesh(new M.SphereGeometry(.07,8,8),new M.MeshBasicMaterial({color:i%2?0xff3fa4:0xffffff}));b.position.set(Math.cos(a)*1.35,-.05,Math.sin(a)*1.35);b.userData.i=i;ufo.add(b)}
- var beam=new M.Mesh(new M.ConeGeometry(1.7,6,32,1,true),new M.MeshBasicMaterial({color:0x9fb8ff,transparent:true,opacity:.16,side:M.DoubleSide,blending:M.AdditiveBlending,depthWrite:false}));beam.position.y=-3.1;ufo.add(beam);
- var ualien=new M.Group(),ah=new M.Mesh(new M.SphereGeometry(.22,16,16),mat(0x7dff6a,{roughness:.6,metalness:0}));ah.scale.set(1,1.25,1);ualien.add(ah);
- [-1,1].forEach(function(k){var e=new M.Mesh(new M.SphereGeometry(.07,8,8),new M.MeshBasicMaterial({color:0x000000}));e.scale.set(1.6,.8,.5);e.position.set(k*.1,.04,.19);e.rotation.z=k*.5;ualien.add(e)});
- ualien.position.y=.55;ufo.add(ualien);S.add(ufo);
-
- var astro=new M.Group(),sui=mat(0xf2f4fa,{metalness:.15,roughness:.35}),gra=mat(0x23283c,{metalness:.6,roughness:.4}),glow=new M.MeshBasicMaterial({color:0x38e1ff});
- function cap(r,h,m){var g=new M.Group(),c=new M.Mesh(new M.CylinderGeometry(r,r,h,20),m),t=new M.Mesh(new M.SphereGeometry(r,20,12),m),u=t.clone();t.position.y=h/2;u.position.y=-h/2;g.add(c,t,u);return g}
- /* torso */
- var torso=cap(.46,.7,sui);torso.scale.z=.8;astro.add(torso);
- var belt=new M.Mesh(new M.CylinderGeometry(.47,.47,.12,24),gra);belt.position.y=-.5;belt.scale.z=.8;astro.add(belt);
- var chest=new M.Mesh(new M.BoxGeometry(.34,.2,.04),glow);chest.position.set(0,.28,.4);astro.add(chest);
- var stripe=new M.Mesh(new M.BoxGeometry(.04,.9,.03),glow);stripe.position.set(0,0,.39);astro.add(stripe);
- /* casco */
- var helm=new M.Mesh(new M.SphereGeometry(.5,32,24),sui);helm.position.y=1.12;helm.scale.set(1,1.04,1.05);astro.add(helm);
- var visor=new M.Mesh(new M.SphereGeometry(.44,32,24,-1.1,2.2,.55,1.5),mat(0x05070f,{metalness:1,roughness:.04,emissive:0x0a1c3a}));visor.position.set(0,1.12,.12);visor.scale.set(1.08,1,1.08);astro.add(visor);
- var rim=new M.Mesh(new M.TorusGeometry(.5,.035,10,40),gra);rim.position.y=.72;rim.rotation.x=Math.PI/2;astro.add(rim);
- [-1,1].forEach(function(k){var e=new M.Mesh(new M.CylinderGeometry(.11,.11,.1,16),gra);e.rotation.z=Math.PI/2;e.position.set(k*.5,1.12,0);astro.add(e);
-  var ear=new M.Mesh(new M.TorusGeometry(.09,.012,6,20),glow);ear.rotation.y=Math.PI/2;ear.position.set(k*.56,1.12,0);astro.add(ear)});
- /* mochila propulsora */
- var pack=new M.Mesh(new M.BoxGeometry(.78,.9,.34),gra);pack.position.set(0,.1,-.45);astro.add(pack);
- [-1,1].forEach(function(k){var n=new M.Mesh(new M.CylinderGeometry(.11,.15,.2,16),mat(0x888fa8,{metalness:.9}));n.position.set(k*.22,-.45,-.45);astro.add(n);
-  var f=new M.Mesh(new M.ConeGeometry(.12,.7,16,1,true),new M.MeshBasicMaterial({color:0x38e1ff,transparent:true,opacity:.5,blending:M.AdditiveBlending,side:M.DoubleSide,depthWrite:false}));f.position.set(k*.22,-.9,-.45);f.rotation.x=Math.PI;f.userData.fl=1;astro.add(f)});
- /* brazos y piernas */
- [-1,1].forEach(function(k){
-  var sh=new M.Mesh(new M.SphereGeometry(.2,16,12),gra);sh.position.set(k*.56,.38,0);astro.add(sh);
-  var arm=cap(.13,.55,sui);arm.position.set(k*.7,.05,.05);arm.rotation.z=k*.5;astro.add(arm);
-  var glove=new M.Mesh(new M.SphereGeometry(.15,16,12),gra);glove.position.set(k*.92,-.34,.1);astro.add(glove);
-  var leg=cap(.17,.7,sui);leg.position.set(k*.24,-1.15,0);leg.rotation.z=k*.06;astro.add(leg);
-  var knee=new M.Mesh(new M.SphereGeometry(.17,12,10),gra);knee.position.set(k*.25,-1.15,.05);astro.add(knee);
-  var boot=new M.Mesh(new M.BoxGeometry(.3,.22,.5),gra);boot.position.set(k*.26,-1.78,.08);astro.add(boot);
-  var sole=new M.Mesh(new M.BoxGeometry(.31,.05,.52),glow);sole.position.set(k*.26,-1.9,.08);astro.add(sole)});
- S.add(astro);
-
- var ball=new M.Mesh(new M.IcosahedronGeometry(1.4,2),mat(0xdddddd,{metalness:1,roughness:.1,flatShading:true}));S.add(ball);
-
- var shoot=[];for(var i=0;i<3;i++){var m=new M.Mesh(new M.CylinderGeometry(.01,.05,3,6),new M.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:0}));m.rotation.z=Math.PI/2.6;S.add(m);shoot.push({m:m,t:Math.random()*6,d:6+Math.random()*4})}
-
- var narrow=false;
- function size(){var w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();narrow=w<760}
- addEventListener('resize',size);size();
- var scroll=0,target=0;
- function onS(){var m=document.documentElement.scrollHeight-innerHeight;target=m>0?scrollY/m:0}
- addEventListener('scroll',onS);onS();
- var t0=performance.now();
-
- (function loop(){requestAnimationFrame(loop);
-  var t=(performance.now()-t0)/1000;scroll+=(target-scroll)*.06;
-  var X=narrow?0:1,cy=-scroll*40;
-  C.position.x+=(mx*1.3-C.position.x)*.05;C.position.y=cy-my*.8;C.lookAt(0,cy,0);
-  stars.position.y=cy*.6;
-  pl1.position.set(Math.cos(t)*8,cy,6);
-  planet.position.set(X?9:3,X?2:6,-8);planet.scale.setScalar(X?1:.5);planet.rotation.y=t*.08;pm.rotation.y=t*.15;
-  var oa=t*.6;sat.position.set(planet.position.x+Math.cos(oa)*(X?9:6),planet.position.y+Math.sin(oa)*1.6+1,Math.sin(oa)*(X?5:3)-4);
-  sat.scale.setScalar(.9);sat.rotation.y=t*.7;sat.rotation.z=Math.sin(t)*.2;blink.visible=Math.floor(t*2)%2==0;
-  ufo.position.set((X?-9:-4)+Math.sin(t*.8)*3,-16+Math.sin(t*1.7)*.6,-6+Math.cos(t*.6)*2);
-  ufo.rotation.z=Math.sin(t*.8)*.18;ufo.children.forEach(function(c){if(c.userData.i!=null){var a=c.userData.i/10*Math.PI*2+t*2;c.position.x=Math.cos(a)*1.35;c.position.z=Math.sin(a)*1.35}});
-  beam.material.opacity=.12+Math.sin(t*5)*.04;ualien.rotation.y=Math.sin(t*2)*.8;
-  ball.position.set(X?10:4,-26,-6);ball.rotation.y=t*.5;
-  astro.position.set((X?-7.5:-2)+Math.sin(t*.4)*1.2,-34+Math.sin(t*.7)*.8,-5);astro.rotation.set(Math.sin(t*.5)*.5,t*.3,Math.cos(t*.4)*.6);astro.scale.setScalar(X?1.1:.8);astro.children.forEach(function(c){if(c.userData.fl){c.scale.y=.8+Math.sin(t*30+c.position.x*9)*.25;c.material.opacity=.4+Math.sin(t*25)*.15}});
-  shoot.forEach(function(s){s.t+=.016;var p=s.t/s.d;if(p>1){s.t=0;s.d=5+Math.random()*7;s.m.position.set((Math.random()-.2)*30,cy+Math.random()*12,-12)}
-   s.m.position.x-=.7;s.m.position.y-=.45;s.m.material.opacity=p<.1?p*8:Math.max(0,.8-p*1.2)});
-  h1.style.transform='rotateY('+(mx*8)+'deg) rotateX('+(-my*6)+'deg)';
-  R.render(S,C)})();
+  var tip=$('tip');
+  setTimeout(function(){tip.hidden=false},2500);setTimeout(function(){tip.hidden=true},11000);
+  $('tipx').onclick=function(){tip.hidden=true};
 })();
 </script>
 </body>
