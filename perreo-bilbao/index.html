@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiestas de perreo en Bilbao · La casita del perreo · Satélite Disco Bar</title>
+<meta name="description" content="Fiestas de perreo en Bilbao todos los viernes: La Universidad del Perreo en Satélite Disco Bar (Deusto). Reggaeton old school, perreo hasta abajo, cachimbas y mesas VIP. Reserva por WhatsApp 602 34 19 60.">
+<link rel="canonical" href="https://salasatelite.es/perreo-bilbao/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Satélite Disco Bar">
+<meta property="og:url" content="https://salasatelite.es/perreo-bilbao/">
+<meta property="og:title" content="Fiestas de perreo en Bilbao · La casita del perreo · Satélite Disco Bar">
+<meta property="og:description" content="Fiestas de perreo en Bilbao todos los viernes: La Universidad del Perreo en Satélite Disco Bar (Deusto). Reggaeton old school, perreo hasta abajo, cachimbas y mesas VIP. Reserva por WhatsApp 602 34 19 60.">
+<meta property="og:image" content="https://salasatelite.es/universidad-perreo.jpg">
+<meta name="theme-color" content="#2440ff">
+<link rel="icon" href="/logo-satelite.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bk:#000;
+  --wh:#fff;
+  --gr:#9a9a9a;
+  --blue:#2440ff;     /* azul del logo de Satélite */
+  --blue2:#1a30d6;
+  --gold:#ffc21a;     /* dorado de Dale Reggaeton */
+  --line:rgba(255,255,255,.14);
+  --disp:'Anton','Impact',sans-serif;
+  --f:'Inter Tight','Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bk);color:var(--wh);font:400 1rem/1.55 var(--f);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video,iframe{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+
+/* BOTONES rectangulares (Eden) */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:14px 34px;background:var(--blue);color:var(--wh);font:800 1rem/1 var(--f);text-transform:uppercase;letter-spacing:.02em;border:0;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--gold);color:var(--bk)}
+.btn.ghost{background:none;box-shadow:inset 0 0 0 2px var(--wh)}
+.btn.ghost:hover{background:var(--wh);color:var(--bk)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+
+/* BARRA DE COLOR con logo (Amnesia) */
+.top{position:fixed;inset:0 0 auto;z-index:30;height:64px;display:flex;justify-content:space-between;align-items:center;padding:0 clamp(12px,3vw,28px);background:var(--blue)}
+.top .logo{display:flex;align-items:center;gap:10px;font:400 1.7rem/1 var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.top .logo img{width:48px;height:48px}
+.burger{width:48px;height:48px;display:grid;place-content:center;gap:7px;background:none;border:0;cursor:pointer}
+.burger i{display:block;width:30px;height:3px;background:var(--wh);border-radius:2px}
+
+/* MENÚ a pantalla completa */
+.menu{position:fixed;inset:0;z-index:40;background:var(--blue);display:grid;place-items:center;text-align:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.menu.open{opacity:1;visibility:visible}
+.menu ul{list-style:none;display:grid;gap:6px}
+.menu a{font:400 clamp(2.6rem,10vw,5.4rem)/1.05 var(--disp);text-transform:uppercase}
+.menu a:hover{color:var(--gold)}
+.menu .close{position:absolute;top:8px;right:clamp(12px,3vw,28px);background:none;border:0;color:var(--wh);font-size:2.6rem;line-height:1;width:48px;height:48px;cursor:pointer}
+
+/* HERO: vídeo a pantalla completa (Eden) */
+.hero{position:relative;height:100svh;min-height:600px;display:grid;place-items:center;overflow:hidden;margin-top:0}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2) 50%,#000)}
+.hero .in{position:relative;z-index:1;text-align:center;display:grid;justify-items:center;gap:16px;padding:64px 16px 0}
+.hero .in .sat{width:clamp(180px,30vw,300px);height:auto}
+.hero .in p,.hero .in h1{font:600 clamp(1rem,2.4vw,1.3rem)/1.3 var(--f);text-transform:uppercase;letter-spacing:.06em}
+
+/* PALABRA GIGANTE REPETIDA (Amnesia) */
+.wall{position:relative;overflow:hidden;padding:clamp(40px,7vw,80px) 0;isolation:isolate}
+.wall .rows{position:absolute;inset:0;z-index:-1;display:grid;align-content:center;gap:0;pointer-events:none;user-select:none}
+.wall .rows div{display:flex;width:max-content;font:400 clamp(4.4rem,15vw,11rem)/.92 var(--disp);text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.wall .rows div span{padding-right:.18em}
+.wall .rows div:nth-child(even){margin-left:-1.6em}
+.wall .rows div:nth-child(even) span:nth-child(odd){color:transparent;-webkit-text-stroke:2px var(--gold)}
+@media(prefers-reduced-motion:no-preference){
+  .wall .rows div{animation:slide 40s linear infinite}
+  .wall .rows div:nth-child(even){animation-direction:reverse}
+  @keyframes slide{to{transform:translateX(-33.333%)}}
+}
+
+/* CÍRCULO con el vídeo (la forma de Amnesia, con el círculo del logo de Satélite) */
+.orb{position:relative;width:min(560px,82vw);aspect-ratio:1;margin:0 auto}
+.orb .disc{position:absolute;inset:0;border-radius:50%;overflow:hidden;box-shadow:0 0 0 10px var(--bk),0 0 0 14px var(--blue)}
+.orb video{width:100%;height:100%;object-fit:cover}
+
+/* PEGATINAS */
+.stk{position:absolute;z-index:2;filter:drop-shadow(0 6px 14px rgba(0,0,0,.6))}
+.stk.s1{width:30%;left:-12%;top:4%;transform:rotate(-14deg)}
+.stk.s2{width:46%;right:-16%;top:-4%;transform:rotate(8deg)}
+.stk.s3{right:-10%;bottom:12%;transform:rotate(-7deg);background:var(--gold);color:var(--bk);font:400 clamp(1.1rem,3.4vw,1.9rem)/1 var(--disp);text-transform:uppercase;padding:10px 16px}
+.stk.s4{left:-8%;bottom:6%;transform:rotate(6deg);background:var(--wh);color:var(--bk);font:800 clamp(.8rem,2.2vw,1.05rem)/1.15 var(--f);text-transform:uppercase;padding:10px 14px;max-width:48%}
+@media(max-width:600px){.stk.s1{left:-6%}.stk.s2{right:-8%}.stk.s3{right:-4%}.stk.s4{left:-3%}}
+
+/* LA UNIVERSIDAD DEL PERREO */
+.uni{background:radial-gradient(ellipse at 70% 30%,rgba(255,43,184,.22),transparent 60%),#0a0008}
+.uni .ev{grid-template-columns:1fr}
+@media(min-width:860px){.uni .ev{grid-template-columns:1fr minmax(0,460px)}.uni .poster{order:2;transform:rotate(2deg)}}
+.uni .when{background:#ff2bb8;color:var(--wh)}
+.uni h3{color:#ff5cc8}
+.uni .tags{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 32px;list-style:none}
+.uni .tags li{font:400 clamp(1.1rem,2.6vw,1.5rem)/1 var(--disp);text-transform:uppercase;padding:8px 14px;border:2px solid #ff2bb8}
+.uni .tags li:nth-child(even){background:var(--gold);color:var(--bk);border-color:var(--gold)}
+.uni .btn{background:#ff2bb8}
+.uni .btn:hover{background:var(--gold);color:var(--bk)}
+
+/* SECCIONES */
+section{padding:clamp(72px,11vw,130px) 0;scroll-margin-top:64px}
+h2{font:400 clamp(3rem,10vw,6.6rem)/.95 var(--disp);text-transform:uppercase;text-align:center;margin-bottom:clamp(36px,6vw,64px)}
+
+/* PRÓXIMOS EVENTOS (Eden) */
+.ev{display:grid;gap:clamp(28px,4vw,56px);align-items:center}
+@media(min-width:860px){.ev{grid-template-columns:minmax(0,460px) 1fr}}
+.ev .poster{display:block;position:relative;transform:rotate(-2deg);box-shadow:0 0 0 6px var(--wh);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.ev .poster:hover{transform:rotate(0) scale(1.02)}
+.ev .poster img{width:100%;height:auto;aspect-ratio:1080/1350;object-fit:cover}
+.ev .when{display:inline-block;background:var(--gold);color:var(--bk);font:400 clamp(1.2rem,2.6vw,1.6rem)/1 var(--disp);text-transform:uppercase;padding:8px 14px}
+.ev h3{font:400 clamp(3rem,8vw,5.6rem)/.95 var(--disp);text-transform:uppercase;margin:18px 0}
+.ev .who{font-size:1.15rem}
+.ev .who b{font-weight:800}
+.ev dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;margin:26px 0 32px}
+.ev dt{text-transform:uppercase;font-size:.85rem;font-weight:800;letter-spacing:.04em;color:var(--gold);padding-top:2px}
+
+/* MESAS Y BOTELLAS */
+.vip{background:var(--blue)}
+.vip h2{color:var(--wh)}
+.prices{display:grid;gap:14px}
+@media(min-width:760px){.prices{grid-template-columns:repeat(3,1fr)}}
+.prices div{background:var(--bk);padding:34px 26px;text-align:center}
+.prices small{display:block;text-transform:uppercase;font-weight:800;font-size:.85rem;letter-spacing:.04em;color:var(--gold)}
+.prices b{display:block;font:400 4.6rem/1 var(--disp);margin:12px 0 8px}
+.prices p{color:var(--gr)}
+.bizum{max-width:680px;margin:52px auto 0;text-align:center}
+.bizum h3{font:400 clamp(2rem,5vw,2.8rem)/1 var(--disp);text-transform:uppercase;margin-bottom:14px}
+.bizum .num{font:400 clamp(2.8rem,9vw,4.6rem)/1 var(--disp);margin:22px 0 26px;letter-spacing:.02em}
+.bizum .btns{justify-content:center}
+.vip .btn{background:var(--bk)}
+.vip .btn:hover{background:var(--gold);color:var(--bk)}
+.vip .btn.ghost{background:none}
+
+/* SATÉLITE */
+.about p{max-width:700px;margin:0 auto 18px;text-align:center;font-size:1.1rem}
+.about .btns{justify-content:center;margin-top:40px}
+
+/* MAPA */
+.map iframe{width:100%;height:420px;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
+
+/* PIE (Eden) */
+footer{padding:80px 0 120px;text-align:center;border-top:1px solid var(--line)}
+footer .mark{width:150px;height:auto;margin:0 auto 34px}
+footer .soc{display:flex;justify-content:center;gap:34px;margin-bottom:40px}
+footer .soc svg{width:34px;height:34px;fill:var(--gold);transition:fill .2s}
+footer .soc a:hover svg{fill:var(--wh)}
+footer h4{font:800 1.05rem/1 var(--f);text-transform:uppercase;margin:28px 0 10px}
+footer p{font-size:1.1rem;line-height:1.4}
+footer small{display:block;margin-top:52px;color:var(--gr);font-size:.85rem}
+
+/* BURBUJA DE MESAS VIP (Eden) */
+.chat{position:fixed;right:16px;bottom:16px;z-index:25;display:flex;align-items:flex-end;gap:12px}
+.chat .tip{max-width:250px;background:var(--wh);color:var(--bk);padding:14px 16px;font-size:.95rem;line-height:1.4;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:opacity .3s,transform .3s;transform-origin:bottom right}
+.chat .tip[hidden]{display:block;opacity:0;transform:scale(.9);pointer-events:none}
+.chat .tip button{float:right;margin:-4px -4px 4px 8px;background:none;border:0;font-size:1.3rem;line-height:1;cursor:pointer;color:#555}
+.chat .b{flex:none;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.chat .b svg{width:32px;height:32px;fill:#fff}
+@media(max-width:520px){.chat .tip{max-width:200px;font-size:.88rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<style>
+.page-hero{padding:140px 0 70px;background:linear-gradient(180deg,#0a0f3a,#000);border-bottom:1px solid var(--line)}
+.page-hero .crumbs{font-size:.9rem;color:var(--gr);margin-bottom:18px}
+.page-hero .crumbs a{color:var(--gold)}
+.page-hero h1{font:400 clamp(2.8rem,9vw,6rem)/.95 var(--disp);text-transform:uppercase;max-width:16ch}
+.page-hero .lead{margin-top:22px;font-size:1.2rem;max-width:60ch}
+.prose{max-width:760px;margin:0 auto}
+.prose h2{text-align:left;font-size:clamp(2rem,6vw,3.4rem);margin:56px 0 18px}
+.prose h2:first-child{margin-top:0}
+.prose p,.prose li{font-size:1.1rem;margin-bottom:14px}
+.prose ul{padding-left:1.2em;margin-bottom:18px}
+.prose a{color:var(--gold)}
+.prose .poster{max-width:420px;margin:10px 0 28px}
+.prose .poster img{width:100%;height:auto;aspect-ratio:1080/1350;object-fit:cover;box-shadow:0 0 0 6px var(--wh)}
+.faq details{border-top:1px solid var(--line);padding:20px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font:800 1.2rem/1.3 var(--f);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.6rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin-top:12px;color:#d6d6d6}
+.cta{margin-top:56px;padding:34px;background:var(--blue);text-align:center}
+.cta h2{margin:0 0 18px!important;text-align:center!important}
+.cta .btns{justify-content:center}
+.cta .btn{background:var(--bk)}
+.cta .btn:hover{background:var(--gold);color:var(--bk)}
+.related{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://salasatelite.es/"}, {"@type": "ListItem", "position": 2, "name": "Perreo en Bilbao", "item": "https://salasatelite.es/perreo-bilbao/"}]}, {"@type": "Event", "name": "Fiesta de perreo en Bilbao: La Universidad del Perreo", "description": "Fiesta de perreo y reggaeton old school todos los viernes en Satélite Disco Bar, Bilbao.", "image": "https://salasatelite.es/universidad-perreo.jpg", "startDate": "2026-10-30T23:00:00+01:00", "eventSchedule": {"@type": "Schedule", "repeatFrequency": "P1W", "byDay": "https://schema.org/Friday", "startTime": "23:00", "scheduleTimezone": "Europe/Madrid"}, "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "NightClub", "@id": "https://salasatelite.es/#club", "name": "Satélite Disco Bar", "address": {"@type": "PostalAddress", "streetAddress": "Ribera de Botica Vieja 3", "addressLocality": "Bilbao", "postalCode": "48014", "addressCountry": "ES"}}, "organizer": {"@id": "https://salasatelite.es/#club"}}]}
+</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="/" aria-label="Satélite Disco Bar, inicio"><img src="/logo-satelite.png" alt="" width="48" height="48">Satélite</a>
+  <button class="burger" id="mbtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button>
+</header>
+
+<nav class="menu" id="menu" aria-label="Menú">
+  <button class="close" id="mclose" type="button" aria-label="Cerrar menú">×</button>
+  <ul>
+    <li><a href="/#eventos">Eventos</a></li>
+    <li><a href="/universidad-del-perreo/">Universidad del Perreo</a></li>
+    <li><a href="/perreo-bilbao/">Perreo en Bilbao</a></li>
+    <li><a href="/reggaeton-bilbao/">Reggaeton en Bilbao</a></li>
+    <li><a href="/preguntas-frecuentes/">Preguntas</a></li>
+    <li><a href="/#mapa">Cómo llegar</a></li>
+    <li><a href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite">Reservar</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="/">Inicio</a> / Perreo en Bilbao</p>
+    <h1>Fiestas de perreo en Bilbao</h1>
+    <p class="lead">¿Buscas dónde perrear en Bilbao? Satélite es la casita del perreo y del reggaeton: todos los viernes, La Universidad del Perreo, con reggaeton antiguo y perreo hasta abajo toda la noche.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap prose">
+    <a class="poster" href="/universidad-perreo.jpg"><img src="/universidad-perreo.jpg" alt="Fiesta de perreo en Bilbao: La Universidad del Perreo, todos los viernes en Satélite Disco Bar" width="1080" height="1350"></a>
+    <h2>La casita del perreo en Bilbao</h2>
+    <p>En Bilbao nos conocen como la casita del perreo y del reggaeton: el sitio donde cada fin de semana suena el reggaeton de siempre y la pista no para.</p>
+    <h2>La fiesta de perreo de los viernes</h2>
+    <p>Cada viernes, Satélite Disco Bar se convierte en La Universidad del Perreo: una fiesta de perreo y reggaeton old school en Bilbao, con los clásicos que llenaban las pistas y que se siguen bailando hasta abajo. Clase de perreo, solo clásicos y ambiente de fiesta de principio a fin.</p>
+    <h2>Dónde perrear en Bilbao</h2>
+    <p>Satélite Disco Bar está en Ribera de Botica Vieja 3, 48014 Bilbao, en la zona de Deusto, junto a la ría. Abrimos viernes y sábados por la noche, de 23:00 a 06:00.</p>
+    <h2>Fiestas especiales de perreo</h2>
+    <p>Además de los viernes, traemos fiestas especiales con DJs invitados, como <b>Dale Reggaeton</b> con Casanova desde Ámsterdam el viernes 23 de octubre. Mira los <a href="/#eventos">próximos eventos</a> o síguenos en <a href="https://www.instagram.com/satelitebilbao/">@satelitebilbao</a>.</p>
+    <h2>Mesas, botellas y cachimbas</h2>
+    <p>Para venir en grupo, reserva mesa por WhatsApp en el <a href="https://wa.me/34602341960">602 34 19 60</a>. Aceptamos Bizum. Tenemos cachimbas y el local está climatizado.</p>
+
+    <div class="cta">
+      <h2>Reserva tu mesa</h2>
+      <p>Escríbenos por WhatsApp con la fecha y cuántos sois.</p>
+      <div class="btns"><a class="btn" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20reservar%20en%20Sat%C3%A9lite">Reservar por WhatsApp</a></div>
+    </div>
+    <div class="related">
+      <a class="btn ghost" href="/universidad-del-perreo/">La Universidad del Perreo</a>
+      <a class="btn ghost" href="/perreo-bilbao/">Fiestas de perreo en Bilbao</a>
+      <a class="btn ghost" href="/reggaeton-bilbao/">Reggaeton en Bilbao</a>
+      <a class="btn ghost" href="/preguntas-frecuentes/">Preguntas frecuentes</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="mark" src="/logo-satelite.png" alt="Satélite Disco Bar" width="150" height="150" loading="lazy">
+    <div class="soc">
+      <a href="https://www.instagram.com/satelitebilbao/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
+      <a href="https://wa.me/34602341960" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1121.8 12 9.8 9.8 0 0112 21.8zM12 0a12 12 0 00-10.3 18.1L0 24l6.1-1.6A12 12 0 1012 0z"/></svg></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Satelite+Disco+Bar+Ribera+de+Botica+Vieja+3+Bilbao" aria-label="Google Maps"><svg viewBox="0 0 24 24"><path d="M12 0C7.6 0 4 3.6 4 8c0 6 8 16 8 16s8-10 8-16c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg></a>
+    </div>
+    <h4>Dirección</h4>
+    <p>Ribera de Botica Vieja 3<br>48014 Bilbao, Bizkaia</p>
+    <h4>Reservas y VIP</h4>
+    <p><a href="tel:+34602341960">+34 602 34 19 60</a><br>WhatsApp y Bizum</p>
+    <h4>Abrimos</h4>
+    <p>Viernes y sábados por la noche</p>
+    <small>Evento Dale Reggaeton · <a href="https://instagram.com/dalereggaetoneu">@dalereggaetoneu</a><br>Solo mayores de edad. Bebe con responsabilidad.</small>
+  </div>
+</footer>
+
+<div class="chat">
+  <div class="tip" id="tip" hidden><button type="button" id="tipx" aria-label="Cerrar">×</button>¿Quieres una mesa VIP? Escríbenos la fecha y cuántos sois.</div>
+  <a class="b" href="https://wa.me/34602341960?text=Hola%2C%20quiero%20una%20mesa%20VIP%20en%20Sat%C3%A9lite.%20Fecha%3A%20%20Personas%3A%20" aria-label="Reservar mesa por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1121.8 12 9.8 9.8 0 0112 21.8zM12 0a12 12 0 00-10.3 18.1L0 24l6.1-1.6A12 12 0 1012 0z"/></svg></a>
+</div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var menu=$('menu'),mb=$('mbtn');
+  function setMenu(o){menu.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
+  mb.onclick=function(){setMenu(true)};$('mclose').onclick=function(){setMenu(false)};
+  addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+  var tip=$('tip');setTimeout(function(){tip.hidden=false},2500);setTimeout(function(){tip.hidden=true},11000);
+  $('tipx').onclick=function(){tip.hidden=true};
+})();
+</script>
+</body>
+</html>
